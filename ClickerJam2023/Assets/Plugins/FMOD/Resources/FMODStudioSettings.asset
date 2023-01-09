@@ -359,8 +359,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:/Users/Will/Documents/FMOD Studio/ClickerJam2022/ClickerJam2022.fspro
-  sourceBankPath: C:/Users/Will/Documents/FMOD Studio/ClickerJam2022/Build
+  sourceProjectPath: ../../FMOD Project/ClickerJam2022/ClickerJam2022.fspro
+  sourceBankPath: ../../FMOD Project/ClickerJam2022/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
