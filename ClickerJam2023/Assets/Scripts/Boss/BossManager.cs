@@ -59,7 +59,7 @@ public class BossManager : MonoBehaviour
     /// <param name="boss">The boss prefab to spawn.</param>
     private void SpawnBoss(BossEnemy boss)
     {
-        if(activeBoss != null) // If a boss is currently active, we despawn it.
+        if (activeBoss != null) // If a boss is currently active, we despawn it.
             activeBoss.Despawn();
 
         activeBoss = Instantiate(boss, bossSpawnPoint.position, Quaternion.identity); // We spawn the boss of the current area.

@@ -10,6 +10,12 @@ public class HubUI : MonoBehaviour
     private VisualElement eventsTab;
     private VisualElement settingsTab;
     private VisualElement activeTab;
+    private VisualElement upgradesPanel;
+    private VisualElement resourcesPanel;
+    private VisualElement navigationPanel;
+    private VisualElement eventsPanel;
+    private VisualElement settingsPanel;
+    private VisualElement currentActivePanel;
 
     private void Awake()
     {
@@ -24,17 +30,30 @@ public class HubUI : MonoBehaviour
         navigationTab = root.Q<VisualElement>("navigation");
         eventsTab = root.Q<VisualElement>("events");
         settingsTab = root.Q<VisualElement>("settings");
+        upgradesPanel = root.Q<VisualElement>("UpgradesTab");
+        resourcesPanel = root.Q<VisualElement>("ResourcesTab");
+        navigationPanel = root.Q<VisualElement>("NavigationTab");
+        eventsPanel = root.Q<VisualElement>("EventsTab");
+        settingsPanel = root.Q<VisualElement>("SettingsTab");
 
         upgradesTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         resourcesTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         navigationTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         eventsTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         settingsTab.RegisterCallback<MouseDownEvent>(ActivateTab);
+
+        upgradesPanel.style.display = DisplayStyle.None;
+        resourcesPanel.style.display = DisplayStyle.None;
+        navigationPanel.style.display = DisplayStyle.None;
+        eventsPanel.style.display = DisplayStyle.None;
+        settingsPanel.style.display = DisplayStyle.None;
+
+        ActivateFirstTab();
     }
 
     private void ActivateTab(MouseDownEvent evt)
     {
-        if(activeTab != null)
+        if (activeTab != null)
         {
             activeTab.RemoveFromClassList("tab-active");
             activeTab.AddToClassList("tab");
@@ -46,5 +65,45 @@ public class HubUI : MonoBehaviour
         tab.AddToClassList("tab-active");
 
         activeTab = tab;
+        currentActivePanel.style.display = DisplayStyle.None;
+
+        switch (activeTab.name)
+        {
+            case "upgrades":
+                upgradesPanel.style.display = DisplayStyle.Flex;
+                currentActivePanel = upgradesPanel;
+                break;
+            case "resources":
+                resourcesPanel.style.display = DisplayStyle.Flex;
+                currentActivePanel = resourcesPanel;
+                break;
+            case "navigation":
+                navigationPanel.style.display = DisplayStyle.Flex;
+                currentActivePanel = navigationPanel;
+                break;
+            case "events":
+                eventsPanel.style.display = DisplayStyle.Flex;
+                currentActivePanel = eventsPanel;
+                break;
+            case "settings":
+                settingsPanel.style.display = DisplayStyle.Flex;
+                currentActivePanel = settingsPanel;
+                break;
+        }
+    }
+
+    private void ActivateFirstTab()
+    {
+        upgradesPanel.style.display = DisplayStyle.Flex;
+        upgradesTab.RemoveFromClassList("tab");
+        upgradesTab.AddToClassList("tab-active");
+
+        activeTab = upgradesTab;
+        currentActivePanel = upgradesPanel;
+    }
+
+    public void UpdateNavigationUI()
+    {
+
     }
 }

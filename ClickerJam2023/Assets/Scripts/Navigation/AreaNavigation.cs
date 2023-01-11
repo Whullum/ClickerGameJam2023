@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System;
 using UnityEngine;
 
@@ -6,8 +5,8 @@ public class AreaNavigation : MonoBehaviour
 {
     public static Action<BossEnemy> AreaLoaded;
 
-    private Area[] allAreas;
-    private Area activeArea;
+    private static Area[] allAreas;
+    private static Area activeArea;
     [SerializeField] private int areaToLoad = 0; // For testing purposes.
 
     private void Awake()
@@ -30,9 +29,9 @@ public class AreaNavigation : MonoBehaviour
         BossManager.BossDefeated -= UnlockNextArea;
     }
 
-    private void NavigateArea(int areaID)
+    public static void NavigateArea(int areaID)
     {
-        for(int i = 0; i < allAreas.Length; i++)
+        for (int i = 0; i < allAreas.Length; i++)
         {
             if (allAreas[i].ID == areaID)
             {

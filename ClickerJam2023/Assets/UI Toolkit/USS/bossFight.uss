@@ -7,4 +7,6 @@
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
     transition-duration: 0.5s;
+    align-items: center;
+    justify-content: center;
 }
