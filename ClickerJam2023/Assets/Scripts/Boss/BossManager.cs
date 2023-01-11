@@ -7,12 +7,16 @@ public class BossManager : MonoBehaviour
     {
         get { return activeBoss; }
     }
+
+    // When the current boss is defeated, this event is invoked.
     public static Action BossDefeated;
 
     // The current boss that the player is fighting.
     private BossEnemy activeBoss;
+    // Boss UI containing the boss health bar.
     private BossFightUI bossUI;
 
+    [Tooltip("Point where the boss is going to be placed.")]
     [SerializeField] private Transform bossSpawnPoint;
 
     private void Awake()
@@ -45,11 +49,13 @@ public class BossManager : MonoBehaviour
     /// </summary>
     public void HitBoss()
     {
-        if (activeBoss == null) return; // If no boss is currently in scene, we cannot continue.
+        if (activeBoss == null) return; // Prevent this method to execute if no boss is currently active.
 
-        if (activeBoss.DamageBoss(PlayerClick.Damage))
+        // If the boss health is 0, we killed the boss.
+        if (activeBoss.DamageBoss(PlayerClick.Damage)) 
             BossDeath();
 
+        // Update the boss UI with the new health values.
         bossUI.UpdateBossHealth(activeBoss.CurrentHealth, activeBoss.BossData.MaxHealth);
     }
 
@@ -59,10 +65,13 @@ public class BossManager : MonoBehaviour
     /// <param name="boss">The boss prefab to spawn.</param>
     private void SpawnBoss(BossEnemy boss)
     {
-        if (activeBoss != null) // If a boss is currently active, we despawn it.
+        // If a boss is currently active, we despawn it.
+        if (activeBoss != null) 
             activeBoss.Despawn();
 
-        activeBoss = Instantiate(boss, bossSpawnPoint.position, Quaternion.identity); // We spawn the boss of the current area.
-        bossUI.UpdateBossHealth(activeBoss.BossData.MaxHealth, activeBoss.BossData.MaxHealth); // Update the boss UI to match spawned boss params.
+        // New boss is created and assigned to be the active boss.
+        activeBoss = Instantiate(boss, bossSpawnPoint.position, Quaternion.identity);
+        // Update the boss UI to match spawned boss params.
+        bossUI.UpdateBossHealth(activeBoss.BossData.MaxHealth, activeBoss.BossData.MaxHealth); 
     }
 }

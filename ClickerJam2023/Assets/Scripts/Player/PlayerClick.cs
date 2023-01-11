@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerClick : MonoBehaviour
 {
+    /// <summary>
+    /// Damage the player does in one click.
+    /// </summary>
     public static float Damage
     {
         get { return damage; }

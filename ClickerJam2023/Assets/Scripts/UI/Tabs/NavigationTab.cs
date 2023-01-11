@@ -5,24 +5,30 @@ public class NavigationTab : MonoBehaviour
 {
     private VisualElement root;
     private VisualElement content;
-    private Area[] allAreas; // Testing purposes, delete after Save System is implemented.
 
     private void Awake()
     {
-        LoadAreasScriptables();
         InitializeDocument();
+    }
+
+    private void Start()
+    {
+        CreateLevels();
     }
 
     private void InitializeDocument()
     {
         root = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("NavigationTab");
         content = root.Q<VisualElement>("content");
-
-        CreateLevels();
     }
 
+    /// <summary>
+    /// Creates one element for each area the game has. Used for navigation.
+    /// </summary>
     private void CreateLevels()
     {
+        Area[] allAreas = AreaNavigation.AllAreas;
+
         for (int i = 0; i < allAreas.Length; i++)
         {
             VisualElement newArea = new VisualElement();
@@ -51,11 +57,10 @@ public class NavigationTab : MonoBehaviour
         }
     }
 
-    private void LoadAreasScriptables()
-    {
-        allAreas = Resources.LoadAll<Area>("Navigation");
-    }
-
+    /// <summary>
+    /// Navigates to the selected area, loading all of its data.
+    /// </summary>
+    /// <param name="evt"></param>
     private void SelectArea(MouseDownEvent evt)
     {
         VisualElement areaButton = evt.currentTarget as VisualElement;

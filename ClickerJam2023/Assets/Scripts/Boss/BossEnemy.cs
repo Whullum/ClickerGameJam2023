@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class BossEnemy : MonoBehaviour
 {
+    /// <summary>
+    /// ScriptableObject containing boss data such as ID, name, etc.
+    /// </summary>
     public Boss BossData
     {
         get { return bossScriptable; }
     }
 
+    /// <summary>
+    /// Current health of this boss.
+    /// </summary>
     public float CurrentHealth
     {
         get { return currentHealth; }
@@ -16,6 +22,7 @@ public class BossEnemy : MonoBehaviour
 
     private float currentHealth;
 
+    [Tooltip("The scriptable object of this boss.")]
     [SerializeField] private Boss bossScriptable;
 
     private void Awake()
@@ -23,6 +30,11 @@ public class BossEnemy : MonoBehaviour
         InitializeBoss();
     }
 
+    /// <summary>
+    /// Damage the boss until it reaches 0.
+    /// </summary>
+    /// <param name="damageAmount">Amount of damage to recieve.</param>
+    /// <returns>True if the boss is killed (health <= 0). False if not.</returns>
     public bool DamageBoss(float damageAmount)
     {
         currentHealth -= damageAmount;
@@ -40,6 +52,9 @@ public class BossEnemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Initialization of the boss properties.
+    /// </summary>
     private void InitializeBoss()
     {
         currentHealth = bossScriptable.MaxHealth;
