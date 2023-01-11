@@ -1,51 +1,68 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class BossManager : Singleton<BossManager>
+public class BossManager : MonoBehaviour
 {
     public BossEnemy ActiveBoss
     {
         get { return activeBoss; }
     }
+    public static Action BossDefeated;
 
     // The current boss that the player is fighting.
     private BossEnemy activeBoss;
     private BossFightUI bossUI;
 
     [SerializeField] private Transform bossSpawnPoint;
-    [SerializeField] private BossEnemy[] allBosses;
-    [SerializeField] private int bossIDToSpawn = 0; // Just for testing purposes.
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
-
         bossUI = FindObjectOfType<BossFightUI>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        SpawnBoss(bossIDToSpawn);
+        AreaNavigation.AreaLoaded += SpawnBoss;
     }
 
+    private void OnDisable()
+    {
+        AreaNavigation.AreaLoaded -= SpawnBoss;
+    }
+
+    /// <summary>
+    /// If the boss is defeated, we destroy it and launch an event to update other systems.
+    /// </summary>
+    private void BossDeath()
+    {
+        Destroy(activeBoss.gameObject);
+
+        BossDefeated?.Invoke();
+    }
+
+    /// <summary>
+    /// Hits the boss with an amount of damage. Called from Unity UI Button.
+    /// </summary>
     public void HitBoss()
     {
-        float damage = 1; // Here we need to use the player damage.
+        if (activeBoss == null) return; // If no boss is currently in scene, we cannot continue.
 
-        activeBoss.DamageBoss(damage);
+        if (activeBoss.DamageBoss(PlayerClick.Damage))
+            BossDeath();
+
         bossUI.UpdateBossHealth(activeBoss.CurrentHealth, activeBoss.BossData.MaxHealth);
     }
 
-    private void SpawnBoss(int ID)
+    /// <summary>
+    /// Spawns the boss of the current active area.
+    /// </summary>
+    /// <param name="boss">The boss prefab to spawn.</param>
+    private void SpawnBoss(BossEnemy boss)
     {
-        for(int i = 0; i < allBosses.Length; i++)
-        {
-            if (allBosses[i].BossData.ID == ID)
-            {
-                activeBoss = Instantiate(allBosses[i], bossSpawnPoint.position, Quaternion.identity);
-                return;
-            }
-        }
+        if(activeBoss != null) // If a boss is currently active, we despawn it.
+            activeBoss.Despawn();
+
+        activeBoss = Instantiate(boss, bossSpawnPoint.position, Quaternion.identity); // We spawn the boss of the current area.
+        bossUI.UpdateBossHealth(activeBoss.BossData.MaxHealth, activeBoss.BossData.MaxHealth); // Update the boss UI to match spawned boss params.
     }
 }

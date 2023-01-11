@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33449be4ccfb8894a81f85bcdb38e8b5, type: 3}
-  m_Name: SecondBoss
+  m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
+  m_Name: Area02 - Steampunk Roman Colosseum
   m_EditorClassIdentifier: 
   ID: 1
-  MaxHealth: 10
-  HealthRegenRatio: 2
-  Name: Ugly  Boy
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Name: Steampunk Roman Colosseum
+  Lore: The old Roman Empire.
+  BossPrefab: {fileID: 1410207690174571512, guid: 6c1f9935611a1eb4a98af420c84707a6, type: 3}

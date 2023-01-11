@@ -18,20 +18,24 @@ public class BossEnemy : MonoBehaviour
 
     [SerializeField] private Boss bossScriptable;
 
-    private void Start()
+    private void Awake()
     {
         InitializeBoss();
     }
 
-    public void DamageBoss(float damageAmount)
+    public bool DamageBoss(float damageAmount)
     {
         currentHealth -= damageAmount;
 
-        if(currentHealth <= 0)
-            Death();
+        if (currentHealth <= 0)
+            return true;
+        return false;
     }
 
-    public void Death()
+    /// <summary>
+    /// Used for when the boss is not defeated but another area is loaded.
+    /// </summary>
+    public void Despawn()
     {
         Destroy(gameObject);
     }

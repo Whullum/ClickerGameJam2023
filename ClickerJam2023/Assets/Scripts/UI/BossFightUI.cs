@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,7 +6,7 @@ public class BossFightUI : MonoBehaviour
     private VisualElement root;
     private VisualElement healthBar;
 
-    private void Start()
+    private void Awake()
     {
         InitializeDocument();
     }

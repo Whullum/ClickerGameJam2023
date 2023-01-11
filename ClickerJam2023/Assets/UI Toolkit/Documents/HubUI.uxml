@@ -1,3 +1,26 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="hub" style="height: 30%; position: absolute; bottom: 0; flex-grow: 1; width: 100%; background-color: rgb(24, 16, 16);" />
+    <ui:Template name="NavigationUI" src="project://database/Assets/UI%20Toolkit/Documents/NavigationUI.uxml?fileID=9197481963319205126&amp;guid=8ce4e330e7e3d114b9bf4b7f87afc1d3&amp;type=3#NavigationUI" />
+    <Style src="project://database/Assets/UI%20Toolkit/USS/hubUI.uss?fileID=7433441132597879392&amp;guid=b5d783a1d9398ce41af24e421b23f2c1&amp;type=3#hubUI" />
+    <ui:VisualElement name="hub" style="height: 100%; position: absolute; flex-grow: 1; width: 50%; left: 0;">
+        <ui:VisualElement name="content" style="flex-grow: 1; background-color: rgb(113, 182, 202); border-left-color: rgb(17, 93, 99); border-right-color: rgb(17, 93, 99); border-top-color: rgb(17, 93, 99); border-bottom-color: rgb(17, 93, 99); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 0;">
+            <ui:Instance template="NavigationUI" name="NavigationUI" style="height: 100%; width: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="tabs" style="bottom: 0; flex-direction: row; align-items: flex-end; flex-grow: 0.05; margin-top: -10px;">
+            <ui:VisualElement name="upgrades" class="tab">
+                <ui:Label text="Upgrades" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="resources" class="tab">
+                <ui:Label text="Resources" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="navigation" class="tab">
+                <ui:Label text="Navigation" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="events" class="tab">
+                <ui:Label text="Event Log" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="settings" class="tab">
+                <ui:Label text="Settings" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>
