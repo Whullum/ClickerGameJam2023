@@ -8,7 +8,7 @@
     <ui:VisualElement name="hub" style="height: 100%; position: absolute; flex-grow: 1; width: 50%; left: 0;">
         <ui:VisualElement name="content" style="flex-grow: 1; background-color: rgb(113, 182, 202); border-left-color: rgb(52, 124, 144); border-right-color: rgb(52, 124, 144); border-top-color: rgb(52, 124, 144); border-bottom-color: rgb(52, 124, 144); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 0; height: 80%;">
             <ui:Instance template="UpgradesTab" name="UpgradesTab" style="display: none;" />
-            <ui:Instance template="ResourcesTab" name="ResourcesTab" style="display: none;" />
+            <ui:Instance template="ResourcesTab" name="ResourcesTab" style="display: none; flex-grow: 1;" />
             <ui:Instance template="NavigationUI" name="NavigationTab" style="display: none;" />
             <ui:Instance template="EventsTab" name="EventsTab" style="display: none;" />
             <ui:Instance template="SettingsTab" name="SettingsTab" style="display: none;" />
@@ -18,7 +18,7 @@
                 <ui:Label text="Upgrades" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
             <ui:VisualElement name="resources" class="tab">
-                <ui:Label text="Resources" display-tooltip-when-elided="true" name="name" />
+                <ui:Label text="Purse" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
             <ui:VisualElement name="navigation" class="tab">
                 <ui:Label text="Navigation" display-tooltip-when-elided="true" name="name" />

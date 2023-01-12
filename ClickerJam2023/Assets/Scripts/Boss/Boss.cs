@@ -11,4 +11,5 @@ public class Boss : ScriptableObject
     public string Name;
     [TextArea(5,50)]
     public string Lore;
+    public int BountyReward;
 }

@@ -63,14 +63,14 @@ public class BossManager : MonoBehaviour
     /// Spawns the boss of the current active area.
     /// </summary>
     /// <param name="boss">The boss prefab to spawn.</param>
-    private void SpawnBoss(BossEnemy boss)
+    private void SpawnBoss(Area areaData)
     {
         // If a boss is currently active, we despawn it.
         if (activeBoss != null) 
             activeBoss.Despawn();
 
         // New boss is created and assigned to be the active boss.
-        activeBoss = Instantiate(boss, bossSpawnPoint.position, Quaternion.identity);
+        activeBoss = Instantiate(areaData.BossPrefab, bossSpawnPoint.position, Quaternion.identity);
         // Update the boss UI to match spawned boss params.
         bossUI.UpdateBossHealth(activeBoss.BossData.MaxHealth, activeBoss.BossData.MaxHealth); 
     }

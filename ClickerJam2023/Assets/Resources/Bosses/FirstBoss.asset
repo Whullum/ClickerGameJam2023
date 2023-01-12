@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: FirstBoss
   m_EditorClassIdentifier: 
   ID: 0
-  MaxHealth: 10
+  MaxHealth: 50
   HealthRegenRatio: 1
   Name: Pretty Boy
   Lore: A tiny cool looking creature. What a shame that a price is on his head.
+  BountyReward: 100

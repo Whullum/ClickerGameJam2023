@@ -12,7 +12,7 @@ public class AreaNavigation : MonoBehaviour
     }
 
     // Invoked when the player selects a different area to load.
-    public static Action<BossEnemy> AreaLoaded;
+    public static Action<Area> AreaLoaded;
 
     private static Area[] allAreas;
     // Current active area.
@@ -54,7 +54,7 @@ public class AreaNavigation : MonoBehaviour
                 // This area is now the active one.
                 activeArea = allAreas[i];
                 // Launch event with the boss prefab data to spawn. Subscribed by BossManager.
-                AreaLoaded?.Invoke(activeArea.BossPrefab);
+                AreaLoaded?.Invoke(activeArea);
                 return;
             }
         }
