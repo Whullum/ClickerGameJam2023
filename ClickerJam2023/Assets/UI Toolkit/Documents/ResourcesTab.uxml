@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS/resourcesTab.uss?fileID=7433441132597879392&amp;guid=3838f34b2a4c38244a3d2690ef00199d&amp;type=3#resourcesTab" />
+    <ui:VisualElement name="container" style="width: 100%; padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px; flex-grow: 1;">
+        <ui:VisualElement name="titleContainer" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; flex-direction: row; justify-content: space-around; align-items: center; width: 100%; margin-bottom: 10px;">
+            <ui:Label text="Your purse" display-tooltip-when-elided="true" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(255, 255, 255); font-size: 40px; flex-shrink: 1; flex-grow: 0.3;" />
+            <ui:VisualElement class="container-title">
+                <ui:VisualElement name="resourceImage" style="background-image: url(&apos;project://database/Assets/Art/Test/credit.png?fileID=21300000&amp;guid=18bed15a9e24d05439e78e9fbce17c9a&amp;type=3#credit&apos;); width: 64px; height: 64px; -unity-background-scale-mode: scale-to-fit;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="wallet" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 25px; color: rgb(255, 255, 0); -unity-font-style: bold;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="dataContainer" class="container" style="margin-bottom: 20px;">
+            <ui:VisualElement name="row" class="row">
+                <ui:Label text="Passive income" display-tooltip-when-elided="true" class="row-text" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="income" class="row-value" style="color: rgba(0, 255, 0, 255);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="row" class="row">
+                <ui:Label text="Harvest time (s)" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="ratio" class="row-value" style="color: rgb(0, 255, 0);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="row" class="row">
+                <ui:Label text="Total gold spend" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="totalSpend" class="row-value" style="color: rgb(255, 0, 0);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="traderContainer" style="width: 100%; flex-direction: row; align-items: center;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art/Test/enemy-spawner.png?fileID=-1774926133&amp;guid=ee13817dc44451742a390625394f2110&amp;type=3#enemy-spawner_2&apos;); width: 400px; height: 400px; -unity-background-scale-mode: scale-to-fit;" />
+            <ui:VisualElement class="container">
+                <ui:Label text="Looking around this strange universe, you see a rare creature coming towards you. You prepare yourself for the coming battle, but suddenly the creature stops, makes some beep noises as you never heard of and then you hear a voice talking to you, first you panicked, becasuse you didn&apos;t know where that voice come from. Suddenly you realize this creature can talk without a mouth! &#10;&#10;- Hello humanoid creature. Do you want to make a profit?&#10;- How?&#10;- Just lend me some of you money and then I can generate an interest from it.&#10;&#10;You don&apos;t understand anything, but what else you can do with that much money?" display-tooltip-when-elided="true" name="companionLore" style="white-space: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

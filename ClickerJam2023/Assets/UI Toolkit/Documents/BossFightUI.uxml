@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS/bossFight.uss?fileID=7433441132597879392&amp;guid=da454b0e8de628a4c923658db60c31a8&amp;type=3#bossFight" />
+    <ui:VisualElement name="boss" style="position: absolute; flex-grow: 1; width: 50%; height: 100%; align-items: center; right: 0;">
+        <ui:VisualElement name="healthBar" style="width: 80%; height: 7%; top: 10%; border-left-width: 7px; border-right-width: 7px; border-top-width: 7px; border-bottom-width: 7px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(255, 95, 0); border-bottom-color: rgb(255, 95, 0); border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; display: flex;">
+            <ui:VisualElement name="health" class="health" style="width: 0; position: absolute;" />
+            <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+                <ui:Label text="0/100" display-tooltip-when-elided="true" name="healthValue" style="color: rgba(255, 255, 255, 255); -unity-font-style: bold; font-size: 30px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

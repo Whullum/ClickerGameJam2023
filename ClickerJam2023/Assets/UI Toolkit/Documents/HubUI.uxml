@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="UpgradesTab" src="project://database/Assets/UI%20Toolkit/Documents/UpgradesTab.uxml?fileID=9197481963319205126&amp;guid=be2880cf924c3c743976948178f09c6f&amp;type=3#UpgradesTab" />
+    <ui:Template name="ResourcesTab" src="project://database/Assets/UI%20Toolkit/Documents/ResourcesTab.uxml?fileID=9197481963319205126&amp;guid=d3ad5fceed7c4fc458ba532856a6114e&amp;type=3#ResourcesTab" />
+    <ui:Template name="NavigationUI" src="project://database/Assets/UI%20Toolkit/Documents/NavigationTab.uxml?fileID=9197481963319205126&amp;guid=8ce4e330e7e3d114b9bf4b7f87afc1d3&amp;type=3#NavigationTab" />
+    <ui:Template name="EventsTab" src="project://database/Assets/UI%20Toolkit/Documents/EventsTab.uxml?fileID=9197481963319205126&amp;guid=1a859c74d08174244b98072427b46994&amp;type=3#EventsTab" />
+    <ui:Template name="SettingsTab" src="project://database/Assets/UI%20Toolkit/Documents/SettingsTab.uxml?fileID=9197481963319205126&amp;guid=25e0eaaa64d70d742be9631fcaa20e40&amp;type=3#SettingsTab" />
+    <Style src="project://database/Assets/UI%20Toolkit/USS/hubUI.uss?fileID=7433441132597879392&amp;guid=b5d783a1d9398ce41af24e421b23f2c1&amp;type=3#hubUI" />
+    <ui:VisualElement name="hub" style="height: 100%; position: absolute; flex-grow: 1; width: 50%; left: 0;">
+        <ui:VisualElement name="content" style="flex-grow: 1; background-color: rgb(113, 182, 202); border-left-color: rgb(52, 124, 144); border-right-color: rgb(52, 124, 144); border-top-color: rgb(52, 124, 144); border-bottom-color: rgb(52, 124, 144); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 0; height: 80%;">
+            <ui:Instance template="UpgradesTab" name="UpgradesTab" style="display: none;" />
+            <ui:Instance template="ResourcesTab" name="ResourcesTab" style="display: none; flex-grow: 1;" />
+            <ui:Instance template="NavigationUI" name="NavigationTab" style="display: none;" />
+            <ui:Instance template="EventsTab" name="EventsTab" style="display: none;" />
+            <ui:Instance template="SettingsTab" name="SettingsTab" style="display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="tabs" style="bottom: 0; flex-direction: row; align-items: flex-end; flex-grow: 0.05; margin-top: -10px;">
+            <ui:VisualElement name="upgrades" class="tab">
+                <ui:Label text="Upgrades" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="resources" class="tab">
+                <ui:Label text="Purse" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="navigation" class="tab">
+                <ui:Label text="Navigation" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="events" class="tab">
+                <ui:Label text="Event Log" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+            <ui:VisualElement name="settings" class="tab">
+                <ui:Label text="Settings" display-tooltip-when-elided="true" name="name" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
