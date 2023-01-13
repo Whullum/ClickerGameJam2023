@@ -49,6 +49,10 @@ public class NavigationTab : MonoBehaviour
             {
                 newArea.userData = allAreas[i].ID;
                 newArea.AddToClassList("area");
+                newArea.RegisterCallback<MouseOverEvent>((type) => 
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Hover");
+                });
                 newArea.RegisterCallback<MouseDownEvent>(SelectArea);
                 text.text = allAreas[i].Name;
             }
@@ -70,6 +74,8 @@ public class NavigationTab : MonoBehaviour
         int areaID = (int)areaButton.userData;
 
         AreaNavigation.NavigateArea(areaID);
-        musicManager.ChangeMusicState(areaID);
+        //musicManager.ChangeMusicState(areaID);
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Click");
     }
 }

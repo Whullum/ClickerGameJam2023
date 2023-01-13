@@ -42,6 +42,27 @@ public class HubUI : MonoBehaviour
         eventsTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         settingsTab.RegisterCallback<MouseDownEvent>(ActivateTab);
 
+        upgradesTab.RegisterCallback<MouseOverEvent>((type) =>
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Hover");
+        });
+        resourcesTab.RegisterCallback<MouseOverEvent>((type) =>
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Hover");
+        });
+        navigationTab.RegisterCallback<MouseOverEvent>((type) =>
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Hover");
+        });
+        eventsTab.RegisterCallback<MouseOverEvent>((type) =>
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Hover");
+        });
+        settingsTab.RegisterCallback<MouseOverEvent>((type) =>
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Hover");
+        });
+
         upgradesPanel.style.display = DisplayStyle.None;
         resourcesPanel.style.display = DisplayStyle.None;
         navigationPanel.style.display = DisplayStyle.None;
@@ -90,6 +111,8 @@ public class HubUI : MonoBehaviour
                 currentActivePanel = settingsPanel;
                 break;
         }
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Click");
     }
 
     private void ActivateFirstTab()

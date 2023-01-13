@@ -55,6 +55,9 @@ public class AreaNavigation : MonoBehaviour
                 activeArea = allAreas[i];
                 // Launch event with the boss prefab data to spawn. Subscribed by BossManager.
                 AreaLoaded?.Invoke(activeArea);
+
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("MusicState", areaID);
+
                 return;
             }
         }
