@@ -6,6 +6,9 @@ public class NavigationTab : MonoBehaviour
     private VisualElement root;
     private VisualElement content;
 
+    [SerializeField]
+    private MusicManager musicManager;
+
     private void Awake()
     {
         InitializeDocument();
@@ -67,5 +70,6 @@ public class NavigationTab : MonoBehaviour
         int areaID = (int)areaButton.userData;
 
         AreaNavigation.NavigateArea(areaID);
+        musicManager.ChangeMusicState(areaID);
     }
 }
