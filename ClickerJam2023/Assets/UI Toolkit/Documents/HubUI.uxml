@@ -18,7 +18,7 @@
                 <ui:Label text="Upgrades" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
             <ui:VisualElement name="resources" class="tab">
-                <ui:Label text="Purse" display-tooltip-when-elided="true" name="name" />
+                <ui:Label text="Droid" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
             <ui:VisualElement name="navigation" class="tab">
                 <ui:Label text="Navigation" display-tooltip-when-elided="true" name="name" />

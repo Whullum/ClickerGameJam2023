@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72727c3efc4b4b64d853ad0391bf7369, type: 3}
-  m_Name: CargoDroid
+  m_Name: 1 - BiggerPockets
   m_EditorClassIdentifier: 
-  GUID: bf03faf6-08dd-482c-8573-81327e779249
-  Cost: 3
-  BaseValueUpgrade: 2
-  EffectIncreaseRatio: 17
-  CostIncreaseRatio: 1.5
-  NextUpgrade: {fileID: 11400000, guid: 52478b5bd55d310478b2206ce8a28115, type: 2}
-  NextUpgradeUnlockCount: 4
+  GUID: 8108c8e8-3b3a-4417-8f55-6855ee4a3142
+  Cost: 5
+  BaseValueUpgrade: 1
+  EffectIncreaseRatio: 50
+  CostIncreaseRatio: 0.4
+  NextUpgrade: {fileID: 11400000, guid: 0fe16f0013ca65041b8af395fac8c6dc, type: 2}
+  NextUpgradeUnlockCount: 5
   TimesUnlocked: 0
-  Unlocked: 0
-  Type: 3
+  Unlocked: 1
+  Type: 2

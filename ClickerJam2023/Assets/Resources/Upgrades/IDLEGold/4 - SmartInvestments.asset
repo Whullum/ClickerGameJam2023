@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72727c3efc4b4b64d853ad0391bf7369, type: 3}
-  m_Name: UraniumLacedPoints
+  m_Name: 4 - SmartInvestments
   m_EditorClassIdentifier: 
-  GUID: f6ecb174-87f7-4697-949c-bf5aef050f04
-  Cost: 35
-  BaseValueUpgrade: 3
-  EffectIncreaseRatio: 50
-  CostIncreaseRatio: 0.5
+  GUID: 3ef80cd4-c2d1-4008-8e22-88a976e4fe14
+  Cost: 10
+  BaseValueUpgrade: 5
+  EffectIncreaseRatio: 40
+  CostIncreaseRatio: 2
   NextUpgrade: {fileID: 0}
-  NextUpgradeUnlockCount: 5
+  NextUpgradeUnlockCount: 4
   TimesUnlocked: 0
   Unlocked: 0
-  Type: 0
+  Type: 3

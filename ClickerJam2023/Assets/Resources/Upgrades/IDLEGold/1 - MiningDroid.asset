@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72727c3efc4b4b64d853ad0391bf7369, type: 3}
-  m_Name: MiningDroid
+  m_Name: 1 - MiningDroid
   m_EditorClassIdentifier: 
   GUID: e7ee45a3-4500-43e1-9ea1-7a8de68e0363
-  Cost: 3
+  Cost: 2
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 15
   CostIncreaseRatio: 1.3
   NextUpgrade: {fileID: 11400000, guid: af864a874c80a5b47a85210e89aaedaf, type: 2}
   NextUpgradeUnlockCount: 4
-  TimesUnlocked: 1
+  TimesUnlocked: 0
   Unlocked: 1
   Type: 3

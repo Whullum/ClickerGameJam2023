@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss05
   m_EditorClassIdentifier: 
   ID: 5
-  MaxHealth: 200
+  MaxHealth: 2000
   HealthRegenRatio: 2
   Name: Ugly  Boy
   Lore: A tiny bad looking creature. What a shame that a price is on his head.

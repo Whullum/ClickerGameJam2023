@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72727c3efc4b4b64d853ad0391bf7369, type: 3}
-  m_Name: ExplodingRounds
+  m_Name: 2 - EagleEye
   m_EditorClassIdentifier: 
-  GUID: 380e6ab5-6536-4275-8684-d75375c12fb7
-  Cost: 59
+  GUID: 380351e4-9701-4240-b2ac-dd3c76a4540f
+  Cost: 10
   BaseValueUpgrade: 2
-  EffectIncreaseRatio: 30
-  CostIncreaseRatio: 0.3
-  NextUpgrade: {fileID: 11400000, guid: 0e7cd5e2fe643c24fba35743fdbbe7ad, type: 2}
-  NextUpgradeUnlockCount: 5
-  TimesUnlocked: 5
-  Unlocked: 1
-  Type: 0
+  EffectIncreaseRatio: 120
+  CostIncreaseRatio: 0.8
+  NextUpgrade: {fileID: 0}
+  NextUpgradeUnlockCount: 3
+  TimesUnlocked: 0
+  Unlocked: 0
+  Type: 2

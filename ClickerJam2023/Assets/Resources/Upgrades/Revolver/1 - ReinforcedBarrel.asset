@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72727c3efc4b4b64d853ad0391bf7369, type: 3}
-  m_Name: ReinforcedBarrel
+  m_Name: 1 - ReinforcedBarrel
   m_EditorClassIdentifier: 
   GUID: 4ee03597-7027-43af-aabd-90e5384b5f50
-  Cost: 17
+  Cost: 20
   BaseValueUpgrade: 1
-  EffectIncreaseRatio: 10
+  EffectIncreaseRatio: 100
   CostIncreaseRatio: 0.1
   NextUpgrade: {fileID: 11400000, guid: e38aac2a070a1734891c8ba59a69920a, type: 2}
   NextUpgradeUnlockCount: 5
-  TimesUnlocked: 9
+  TimesUnlocked: 0
   Unlocked: 1
   Type: 0
