@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
-    public BossEnemy ActiveBoss
+    public static BossEnemy ActiveBoss
     {
         get { return activeBoss; }
     }
@@ -12,9 +12,10 @@ public class BossManager : MonoBehaviour
     public static Action BossDefeated;
 
     // The current boss that the player is fighting.
-    private BossEnemy activeBoss;
+    private static BossEnemy activeBoss;
     // Boss UI containing the boss health bar.
     private BossFightUI bossUI;
+    private float damageTimer;
 
     [Tooltip("Point where the boss is going to be placed.")]
     [SerializeField] private Transform bossSpawnPoint;
@@ -34,6 +35,11 @@ public class BossManager : MonoBehaviour
         AreaNavigation.AreaLoaded -= SpawnBoss;
     }
 
+    private void Update()
+    {
+        IDLEBossHit();
+    }
+
     /// <summary>
     /// If the boss is defeated, we destroy it and launch an event to update other systems.
     /// </summary>
@@ -47,13 +53,22 @@ public class BossManager : MonoBehaviour
     /// <summary>
     /// Hits the boss with an amount of damage. Called from Unity UI Button.
     /// </summary>
-    public void HitBoss()
+    /// <param name="hitType">0 is active hit (player must click to do damage). 1 is idle hit (each second boss recives damage).</param>
+    public void HitBoss(int hitType)
     {
         if (activeBoss == null) return; // Prevent this method to execute if no boss is currently active.
 
         // If the boss health is 0, we killed the boss.
-        if (activeBoss.DamageBoss(PlayerClick.Damage)) 
-            BossDeath();
+        if (hitType == 0)
+        {
+            if (activeBoss.DamageBoss(PlayerRevolver.Damage))
+                BossDeath();
+        }
+        else if (hitType == 1)
+        {
+            if (activeBoss.DamageBoss(PlayerRevolver.IDLEDamage))
+                BossDeath();
+        }
 
         // Update the boss UI with the new health values.
         bossUI.UpdateBossHealth(activeBoss.CurrentHealth, activeBoss.BossData.MaxHealth);
@@ -66,12 +81,22 @@ public class BossManager : MonoBehaviour
     private void SpawnBoss(Area areaData)
     {
         // If a boss is currently active, we despawn it.
-        if (activeBoss != null) 
+        if (activeBoss != null)
             activeBoss.Despawn();
 
         // New boss is created and assigned to be the active boss.
         activeBoss = Instantiate(areaData.BossPrefab, bossSpawnPoint.position, Quaternion.identity);
         // Update the boss UI to match spawned boss params.
-        bossUI.UpdateBossHealth(activeBoss.BossData.MaxHealth, activeBoss.BossData.MaxHealth); 
+        bossUI.UpdateBossHealth(activeBoss.BossData.MaxHealth, activeBoss.BossData.MaxHealth);
+    }
+
+    private void IDLEBossHit()
+    {
+        if (damageTimer <= 0)
+        {
+            HitBoss(1);
+            damageTimer = 1;
+        }
+        damageTimer -= Time.deltaTime;
     }
 }

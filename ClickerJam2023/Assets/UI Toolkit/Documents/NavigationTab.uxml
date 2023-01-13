@@ -1,4 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/navigationUI.uss?fileID=7433441132597879392&amp;guid=1246437fb9eafdd42b10b8825b1d9d77&amp;type=3#navigationUI" />
-    <ui:VisualElement name="content" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%; height: 100%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;" />
+    <ui:VisualElement name="content" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%; height: 100%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+        <ui:VisualElement name="navigationProgressBar" style="width: 80%; height: 7%; top: 10%; border-left-width: 7px; border-right-width: 7px; border-top-width: 7px; border-bottom-width: 7px; border-left-color: rgb(64, 0, 96); border-right-color: rgb(64, 0, 96); border-top-color: rgb(64, 0, 96); border-bottom-color: rgb(64, 0, 96); border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; display: flex;">
+            <ui:VisualElement style="background-color: rgb(30, 1, 38); width: 100%; height: 100%; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px;">
+                <ui:VisualElement name="progress" class="health" style="width: 0; position: absolute; height: 100%; background-color: rgb(154, 0, 176); border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px;" />
+                <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+                    <ui:Label text="You can travel to another area" display-tooltip-when-elided="true" name="navigationText" style="color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 30px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>

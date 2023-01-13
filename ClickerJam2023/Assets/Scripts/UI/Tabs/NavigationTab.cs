@@ -1,14 +1,25 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static System.TimeZoneInfo;
 
 public class NavigationTab : MonoBehaviour
 {
     private VisualElement root;
     private VisualElement content;
+    private VisualElement navigationProgressBar;
+    private VisualElement navigationProgress;
+    private Label navigationText;
+    private ParticleSystem areaLoadEffect;
+    private bool loadingArea;
+    private float transitionTime;
+    [SerializeField] private float areaTransitionTime = 2;
 
     private void Awake()
     {
         InitializeDocument();
+
+        areaLoadEffect = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Start()
@@ -20,6 +31,9 @@ public class NavigationTab : MonoBehaviour
     {
         root = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("NavigationTab");
         content = root.Q<VisualElement>("content");
+        navigationProgressBar = root.Q<VisualElement>("navigationProgressBar");
+        navigationProgress = root.Q<VisualElement>("progress");
+        navigationText = root.Q<Label>("navigationText");
     }
 
     /// <summary>
@@ -54,6 +68,7 @@ public class NavigationTab : MonoBehaviour
                 newArea.AddToClassList("area-locked");
                 text.text = "Locked";
             }
+            navigationProgressBar.BringToFront();
         }
     }
 
@@ -66,6 +81,31 @@ public class NavigationTab : MonoBehaviour
         VisualElement areaButton = evt.currentTarget as VisualElement;
         int areaID = (int)areaButton.userData;
 
+        StartCoroutine(LoadNewArea(areaID));
+        loadingArea = true;
+    }
+
+    private IEnumerator LoadNewArea(int areaID)
+    {
+        if (loadingArea) yield return null;
+
+        navigationText.text = "Traveling to another dimension...";
+        transitionTime = 0;
+
+        while (transitionTime < areaTransitionTime)
+        {
+            transitionTime += Time.deltaTime;
+            float transitionPercent = transitionTime / areaTransitionTime * 100;
+
+            navigationProgress.style.width = Length.Percent(transitionPercent);
+
+            yield return null;
+        }
+
+        navigationProgress.style.width = Length.Percent(0);
+        navigationText.text = "You can travel to another area";
+        loadingArea = false;
+        areaLoadEffect.Play();
         AreaNavigation.NavigateArea(areaID);
     }
 }

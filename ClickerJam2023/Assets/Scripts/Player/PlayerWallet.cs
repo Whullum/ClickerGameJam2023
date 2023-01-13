@@ -20,14 +20,6 @@ public class PlayerWallet : MonoBehaviour
     }
 
     /// <summary>
-    /// Time to add to the wallet the current moneyIncome.
-    /// </summary>
-    public static float IncomeRatio
-    {
-        get { return incomeRatio; }
-    }
-
-    /// <summary>
     /// All the money the player has spend.
     /// </summary>
     public static int TotalMoneySpend
@@ -35,13 +27,21 @@ public class PlayerWallet : MonoBehaviour
         get { return totalMoneySpend; }
     }
 
+    /// <summary>
+    /// Gol per click this wallet receives.
+    /// </summary>
+    public static int GoldPerClick
+    {
+        get { return goldPerClick; }
+    }
+
     // Called when something changes inside the wallet.
     public static Action WalletUpdated;
 
-    private static int wallet = 0;
+    private static int wallet = 100;
     private static int moneyIncome = 0; // Amount of money the player gets when reached incomeRatio.
     private static int totalMoneySpend = 0;
-    private static float incomeRatio = Mathf.Infinity; // Each ratio income comes.
+    private static int goldPerClick = 0;
     private float nextIncomeTime;
 
     private void Update()
@@ -54,6 +54,8 @@ public class PlayerWallet : MonoBehaviour
         wallet += amount;
         WalletUpdated?.Invoke();
     }
+
+    public static void LoadWalletData(int data) => wallet = data;
 
     public static bool SpendMoney(int spendAmount)
     {
@@ -69,25 +71,24 @@ public class PlayerWallet : MonoBehaviour
         }
     }
 
-    public static void IncreaseMoneyIncome(int moneyIncomeIncrease, float ratioIncrease)
+    public static void IncreaseMoneyIncome(int moneyIncomeIncrease)
     {
         moneyIncome += moneyIncomeIncrease;
-        incomeRatio += ratioIncrease;
         WalletUpdated?.Invoke();
     }
+
+    public static void IncreaseGoldPerClick(int goldIncrease) => goldPerClick += goldIncrease;
 
     /// <summary>
     /// Automaticaly adds money to the wallet depending on the income factor.
     /// </summary>
     private void GenerateMoney()
     {
-        if (nextIncomeTime >= incomeRatio)
+        if (nextIncomeTime <= 0)
         {
-            wallet += moneyIncome;
-            nextIncomeTime = 0;
-            WalletUpdated?.Invoke();
+            AddMoney(moneyIncome);
+            nextIncomeTime = 1;
         }
-
-        nextIncomeTime += Time.deltaTime;
+        nextIncomeTime -= Time.deltaTime;
     }
 }

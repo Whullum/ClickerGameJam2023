@@ -1,79 +1,163 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/upgradesTab.uss?fileID=7433441132597879392&amp;guid=2ddf8ea027ecd684a936ef9474c57858&amp;type=3#upgradesTab" />
     <ui:VisualElement name="container" style="width: 100%; height: 100%; flex-grow: 1; align-items: flex-start; justify-content: flex-start; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
-        <ui:Label text="Revolver Upgrade" display-tooltip-when-elided="true" class="title-text" />
-        <ui:VisualElement class="container">
-            <ui:VisualElement style="flex-grow: 0.3; margin-right: 20px;">
-                <ui:VisualElement class="weapon-upgrade-data-container">
-                    <ui:Label text="Cost" display-tooltip-when-elided="true" />
-                    <ui:VisualElement class="revolver-data-container">
-                        <ui:Label text="0" display-tooltip-when-elided="true" name="revolverUpgradeCost" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
-                <ui:VisualElement class="weapon-upgrade-data-container">
-                    <ui:Label text="Damage" display-tooltip-when-elided="true" />
-                    <ui:VisualElement class="revolver-data-container">
-                        <ui:Label text="0" display-tooltip-when-elided="true" name="revolverUpgradeCost" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement class="revolver-upgrade-button">
-                <ui:Label text="Upgrade!" display-tooltip-when-elided="true" />
-            </ui:VisualElement>
+        <ui:VisualElement style="position: absolute; right: 0; background-color: rgb(29, 29, 29); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; flex-direction: row; align-items: center; justify-content: space-around; margin-right: 5px; margin-top: 5px; width: 30%;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art/Test/credit.png?fileID=21300000&amp;guid=18bed15a9e24d05439e78e9fbce17c9a&amp;type=3#credit&apos;); width: 32px; height: 32px; -unity-background-scale-mode: scale-to-fit; flex-grow: 0.2;" />
+            <ui:Label text="0" display-tooltip-when-elided="true" name="wallet" style="padding-left: 3px; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(255, 255, 0); -unity-font-style: bold; -unity-text-align: middle-center; font-size: 16px; flex-grow: 0.8;" />
         </ui:VisualElement>
-        <ui:Label text="Resource Gathering" display-tooltip-when-elided="true" class="title-text" />
+        <ui:Label text="Revolver Damage" display-tooltip-when-elided="true" class="title-text" />
         <ui:VisualElement class="container">
-            <ui:VisualElement name="basicIncomeButton" class="resource-button">
-                <ui:Label text="Basic Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+            <ui:VisualElement name="reinforcedBarrelButton" class="basic-button revolver-button">
+                <ui:Label text="Reinforced Barrel" display-tooltip-when-elided="true" class="upgrade-name-text" />
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:Label text="+1 gold increase" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="mediumIncomeButton" class="resource-button">
+            <ui:VisualElement name="explodingRoundsButton" class="basic-button revolver-button">
+                <ui:Label text="Exploding Rounds" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="uraniumLacedPointsButton" class="basic-button revolver-button">
+                <ui:Label text="Uranium Laced Points" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="IDLE Revolver Damage" display-tooltip-when-elided="true" class="title-text" />
+        <ui:VisualElement class="container">
+            <ui:VisualElement name="combatDroidButton" class="basic-button idle-revolver-button">
+                <ui:Label text="Combat Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="rocketDroidButton" class="basic-button idle-revolver-button">
+                <ui:Label text="Rocket Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="swarmerDroidButton" class="basic-button idle-revolver-button">
+                <ui:Label text="Swarmer Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="megaDroidButton" class="basic-button idle-revolver-button">
+                <ui:Label text="Mega droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="Gold per Click" display-tooltip-when-elided="true" class="title-text" />
+        <ui:VisualElement class="container">
+            <ui:VisualElement name="biggerPocketsButton" class="basic-button gold-button">
+                <ui:Label text="Bigger Pockets" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="eagleEyeButton" class="basic-button gold-button">
+                <ui:Label text="Eagle Eye" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="IDLE Gold" display-tooltip-when-elided="true" class="title-text" />
+        <ui:VisualElement class="container">
+            <ui:VisualElement name="miningDroidButton" class="basic-button idle-gold-button">
+                <ui:Label text="Mining Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+                <ui:VisualElement class="revolver-data-container">
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="cargoDroidButton" class="basic-button idle-gold-button">
                 <ui:Label text="Cargo Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:Label text="+7 gold increase" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="heavyIncomeButton" class="resource-button">
-                <ui:Label text="Battle Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
+            <ui:VisualElement name="merchantDroidButton" class="basic-button idle-gold-button">
+                <ui:Label text="Merchant Droid" display-tooltip-when-elided="true" class="upgrade-name-text" />
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:Label text="+25 gold increase" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="ratioButton" class="resource-button">
-                <ui:Label text="Rapid delivery" display-tooltip-when-elided="true" class="upgrade-name-text" />
+            <ui:VisualElement name="smartInvestmentsButton" class="basic-button idle-gold-button">
+                <ui:Label text="Smart Investments" display-tooltip-when-elided="true" class="upgrade-name-text" />
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:Label text="less cooldown time" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:Label text="Consumables" display-tooltip-when-elided="true" class="title-text" />
-        <ui:VisualElement class="container">
-            <ui:VisualElement name="consumable01" class="consumable-button">
-                <ui:Label text="Uranium-enriched bullets" display-tooltip-when-elided="true" class="upgrade-name-text" />
-                <ui:VisualElement class="revolver-data-container">
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
+                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
                 </ui:VisualElement>
-                <ui:Label text="double damage for a brief time" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-            </ui:VisualElement>
-            <ui:VisualElement name="consumable02" class="consumable-button">
-                <ui:Label text="Neutralizer Agent" display-tooltip-when-elided="true" class="upgrade-name-text" />
-                <ui:VisualElement class="revolver-data-container">
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
-                </ui:VisualElement>
-                <ui:Label text="prevents boss from regenerating" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-            </ui:VisualElement>
-            <ui:VisualElement name="consumable03" class="consumable-button">
-                <ui:Label text="Overcharge" display-tooltip-when-elided="true" class="upgrade-name-text" />
-                <ui:VisualElement class="revolver-data-container">
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
-                </ui:VisualElement>
-                <ui:Label text="faster resource gathering" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
