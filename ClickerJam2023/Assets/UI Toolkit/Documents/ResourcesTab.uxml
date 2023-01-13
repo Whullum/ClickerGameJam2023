@@ -10,12 +10,8 @@
         </ui:VisualElement>
         <ui:VisualElement name="dataContainer" class="container" style="margin-bottom: 20px;">
             <ui:VisualElement name="row" class="row">
-                <ui:Label text="Passive income" display-tooltip-when-elided="true" class="row-text" />
-                <ui:Label text="0" display-tooltip-when-elided="true" name="income" class="row-value" style="color: rgba(0, 255, 0, 255);" />
-            </ui:VisualElement>
-            <ui:VisualElement name="row" class="row">
-                <ui:Label text="Harvest time (s)" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
-                <ui:Label text="0" display-tooltip-when-elided="true" name="ratio" class="row-value" style="color: rgb(0, 255, 0);" />
+                <ui:Label text="Passive income (s)" display-tooltip-when-elided="true" class="row-text" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="income" class="row-value" style="color: rgb(0, 255, 0);" />
             </ui:VisualElement>
             <ui:VisualElement name="row" class="row">
                 <ui:Label text="Total gold spend" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
@@ -23,7 +19,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="traderContainer" style="width: 100%; flex-direction: row; align-items: center;">
-            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art/Test/enemy-spawner.png?fileID=-1774926133&amp;guid=ee13817dc44451742a390625394f2110&amp;type=3#enemy-spawner_2&apos;); width: 400px; height: 400px; -unity-background-scale-mode: scale-to-fit;" />
+            <ui:VisualElement name="goldImageClick" class="gold-image-click" />
             <ui:VisualElement class="container">
                 <ui:Label text="Looking around this strange universe, you see a rare creature coming towards you. You prepare yourself for the coming battle, but suddenly the creature stops, makes some beep noises as you never heard of and then you hear a voice talking to you, first you panicked, becasuse you didn&apos;t know where that voice come from. Suddenly you realize this creature can talk without a mouth! &#10;&#10;- Hello humanoid creature. Do you want to make a profit?&#10;- How?&#10;- Just lend me some of you money and then I can generate an interest from it.&#10;&#10;You don&apos;t understand anything, but what else you can do with that much money?" display-tooltip-when-elided="true" name="companionLore" style="white-space: normal;" />
             </ui:VisualElement>

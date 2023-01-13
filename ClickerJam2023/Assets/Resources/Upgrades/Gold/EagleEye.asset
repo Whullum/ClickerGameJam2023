@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72727c3efc4b4b64d853ad0391bf7369, type: 3}
+  m_Name: EagleEye
+  m_EditorClassIdentifier: 
+  GUID: 380351e4-9701-4240-b2ac-dd3c76a4540f
+  Cost: 10
+  BaseValueUpgrade: 2
+  EffectIncreaseRatio: 20
+  CostIncreaseRatio: 1.2
+  NextUpgrade: {fileID: 0}
+  NextUpgradeUnlockCount: 3
+  TimesUnlocked: 0
+  Unlocked: 0
+  Type: 2
