@@ -74,7 +74,6 @@ public class NavigationTab : MonoBehaviour
         int areaID = (int)areaButton.userData;
 
         AreaNavigation.NavigateArea(areaID);
-        //musicManager.ChangeMusicState(areaID);
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Click");
     }
