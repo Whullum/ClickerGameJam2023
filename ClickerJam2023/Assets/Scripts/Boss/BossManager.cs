@@ -61,6 +61,8 @@ public class BossManager : MonoBehaviour
         // If the boss health is 0, we killed the boss.
         if (hitType == 0)
         {
+            PlayerRevolver.IsClicking = true;
+
             if (activeBoss.DamageBoss(PlayerRevolver.Damage))
                 BossDeath();
         }

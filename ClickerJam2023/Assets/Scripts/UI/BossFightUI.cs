@@ -21,6 +21,8 @@ public class BossFightUI : MonoBehaviour
 
     public void UpdateBossHealth(float currentHealth, float maxHealth)
     {
+        if (currentHealth < 0) currentHealth = 0;
+
         float healthPercent = currentHealth / maxHealth * 100f;
         healthBar.style.width = Length.Percent(healthPercent);
         healthValue.text = currentHealth + "/" + maxHealth;

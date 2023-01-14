@@ -940,8 +940,9 @@ GameObject:
   - component: {fileID: 1569740287}
   - component: {fileID: 1569740286}
   - component: {fileID: 1569740288}
+  - component: {fileID: 1569740289}
   m_Layer: 0
-  m_Name: MC-Tes3t
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -988,7 +989,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6417a9e5e57b4b24488fca9fa625a4e6, type: 3}
+  m_Sprite: {fileID: -46115100, guid: d05ddac372414a64bb863789a1c7d6d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1026,6 +1027,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4533098d184e2ab41b59d254a2f54cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 1569740289}
+--- !u!95 &1569740289
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569740285}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abde2035ab7b6de44bae0393312856f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1578309190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5887866177721702389, guid: ad5eaed5e5d31964c8769290a2348574, type: 3}
