@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: MerchantDroid
   m_EditorClassIdentifier: 
   GUID: a2727646-cbc4-4cb1-a83b-2eba0bc0159c
-  Cost: 6
+  Cost: 338
   BaseValueUpgrade: 3
   EffectIncreaseRatio: 20
   CostIncreaseRatio: 1.7
   NextUpgrade: {fileID: 11400000, guid: d5b31cad4b6c9e84896a6750417d1e30, type: 2}
   NextUpgradeUnlockCount: 4
-  TimesUnlocked: 0
-  Unlocked: 0
+  TimesUnlocked: 4
+  Unlocked: 1
   Type: 3

@@ -46,6 +46,7 @@ public class UpgradeManager : MonoBehaviour
             setUpgrade.Value = upgrades[i].Value;
             setUpgrade.TimesUnlocked = upgrades[i].TimesUnlocked;
             setUpgrade.Unlocked = upgrades[i].Unlocked;
+            setUpgrade.NextValue = Mathf.CeilToInt((setUpgrade.BaseValueUpgrade * setUpgrade.EffectIncreaseRatio) / 100 + setUpgrade.Value); // Compute next value so it is shown in the UI
 
             ExpandSystems(setUpgrade, 0);
         }
@@ -61,9 +62,11 @@ public class UpgradeManager : MonoBehaviour
         int previousValue = upgrade.Value;
         int newCost = Mathf.CeilToInt(upgrade.Cost * upgrade.CostIncreaseRatio + upgrade.Cost);
         int newValue = Mathf.CeilToInt((upgrade.BaseValueUpgrade * upgrade.EffectIncreaseRatio) / 100 + upgrade.Value);
+        int nextValue = Mathf.CeilToInt((upgrade.BaseValueUpgrade * upgrade.EffectIncreaseRatio) / 100 + newValue);
 
         upgrade.Cost = newCost;
         upgrade.Value = newValue;
+        upgrade.NextValue = nextValue;
         upgrade.TimesUnlocked++;
 
         if (upgrade.TimesUnlocked >= upgrade.NextUpgradeUnlockCount)

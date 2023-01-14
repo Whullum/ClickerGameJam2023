@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: CombatDroid
   m_EditorClassIdentifier: 
   GUID: 1e1a6987-a4b9-469f-9960-c6d23e0d7de0
-  Cost: 2
+  Cost: 290
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 10
   CostIncreaseRatio: 0.8
   NextUpgrade: {fileID: 11400000, guid: 09f2ca86b7e828242b376725a78243d6, type: 2}
   NextUpgradeUnlockCount: 5
-  TimesUnlocked: 0
+  TimesUnlocked: 5
   Unlocked: 1
   Type: 1

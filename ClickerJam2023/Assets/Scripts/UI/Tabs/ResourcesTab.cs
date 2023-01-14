@@ -8,6 +8,9 @@ public class ResourcesTab : MonoBehaviour
     private VisualElement goldImageClick;
     private Label wallet;
     private Label income;
+    private Label idleIncome;
+    private Label damage;
+    private Label idleDamage;
     private Label totalSpend;
     private Label companionLore;
 
@@ -41,6 +44,9 @@ public class ResourcesTab : MonoBehaviour
         goldImageClick = content.Q<VisualElement>("goldImageClick");
         wallet = content.Q<Label>("wallet");
         income = content.Q<Label>("income");
+        idleIncome = content.Q<Label>("idleIncome");
+        damage = content.Q<Label>("damage");
+        idleDamage = content.Q<Label>("idleDamage");
         totalSpend = content.Q<Label>("totalSpend");
         companionLore = content.Q<Label>("companionLore");
 
@@ -50,7 +56,10 @@ public class ResourcesTab : MonoBehaviour
     private void UpdateUI()
     {
         wallet.text = PlayerWallet.Wallet.ToString();
-        income.text = PlayerWallet.MoneyIncome.ToString();
+        income.text = PlayerWallet.GoldPerClick.ToString();
+        idleIncome.text = PlayerWallet.MoneyIncome.ToString();
+        damage.text = PlayerRevolver.Damage.ToString();
+        idleDamage.text = PlayerRevolver.IDLEDamage.ToString();
         totalSpend.text = PlayerWallet.TotalMoneySpend.ToString();
     }
 

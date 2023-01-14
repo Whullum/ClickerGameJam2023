@@ -1,15 +1,16 @@
 .revolver-data-container {
     background-color: rgb(34, 34, 34);
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    justify-content: center;
     align-items: center;
+    white-space: normal;
+    -unity-text-align: middle-center;
 }
 
 .container {
@@ -39,24 +40,14 @@
 }
 
 .upgrade-name-text {
-    margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     white-space: normal;
 }
 
-.upgrade-tooltip-text {
-    font-size: 15px;
-    -unity-font-style: italic;
-    color: rgb(154, 154, 154);
-    margin-top: 5px;
-    white-space: normal;
-    -unity-text-align: upper-center;
-}
-
 .title-text {
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-left;
     margin-bottom: 10px;
@@ -71,12 +62,14 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .revolver-button {
@@ -157,5 +150,54 @@
 
 .value-text {
     -unity-font-style: bold-and-italic;
-    color: rgba(197, 197, 197, 255);
+    color: rgb(255, 255, 255);
+}
+
+.button-locked {
+    background-color: rgb(38, 38, 38);
+    border-left-color: rgb(17, 17, 17);
+    border-right-color: rgb(17, 17, 17);
+    border-top-color: rgb(17, 17, 17);
+    border-bottom-color: rgb(17, 17, 17);
+    transition-duration: 0.2s;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    white-space: normal;
+    flex-wrap: wrap;
+    transition-property: none;
+}
+
+.tooltip-title {
+    font-size: 12px;
+    color: rgba(219, 219, 219, 255);
+    -unity-text-align: middle-center;
+}
+
+.upgrade-tooltip-text {
+    font-size: 15px;
+    -unity-font-style: italic;
+    color: rgb(154, 154, 154);
+    white-space: normal;
+    -unity-text-align: upper-center;
+}
+
+.tooltip-container {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(58, 53, 53, 255);
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 2px;
+    align-items: center;
+    justify-content: flex-start;
 }

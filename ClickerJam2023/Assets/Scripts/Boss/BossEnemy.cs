@@ -40,7 +40,12 @@ public class BossEnemy : MonoBehaviour
         currentHealth -= damageAmount;
 
         if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            AddBountyReward();
             return true;
+        }
+            
         return false;
     }
 
@@ -58,5 +63,13 @@ public class BossEnemy : MonoBehaviour
     private void InitializeBoss()
     {
         currentHealth = bossScriptable.MaxHealth;
+    }
+
+    private void AddBountyReward()
+    {
+        // We give the player the reward
+        PlayerWallet.AddMoney(bossScriptable.BountyReward);
+
+        // Cool effects and sounds
     }
 }

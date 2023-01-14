@@ -15,10 +15,12 @@ public class Upgrade : ScriptableObject
     public bool Unlocked;
     public UpgradeType Type;
     public int Value { get; set; }
+    public int NextValue { get; set; }
 
     private void OnEnable()
     {
         Value = 0;
+        NextValue = 0;
     }
 
     private void OnValidate()
