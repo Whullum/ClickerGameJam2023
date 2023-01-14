@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: ReinforcedBarrel
   m_EditorClassIdentifier: 
   GUID: 4ee03597-7027-43af-aabd-90e5384b5f50
-  Cost: 17
+  Cost: 5
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 10
   CostIncreaseRatio: 0.1
   NextUpgrade: {fileID: 11400000, guid: e38aac2a070a1734891c8ba59a69920a, type: 2}
-  NextUpgradeUnlockCount: 2
-  TimesUnlocked: 9
+  NextUpgradeUnlockCount: 10
+  TimesUnlocked: 0
   Unlocked: 1
   Type: 0

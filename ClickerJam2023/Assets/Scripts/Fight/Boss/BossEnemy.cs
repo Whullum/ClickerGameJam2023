@@ -21,6 +21,7 @@ public class BossEnemy : MonoBehaviour
     }
 
     private float currentHealth;
+    private float aliveTime;
 
     [Tooltip("The scriptable object of this boss.")]
     [SerializeField] private Boss bossScriptable;
@@ -28,6 +29,16 @@ public class BossEnemy : MonoBehaviour
     private void Awake()
     {
         InitializeBoss();
+    }
+
+    private void Start()
+    {
+        aliveTime = bossScriptable.ActiveTime;
+    }
+
+    private void Update()
+    {
+        DespawnTimer();
     }
 
     /// <summary>
@@ -71,5 +82,15 @@ public class BossEnemy : MonoBehaviour
         PlayerWallet.AddMoney(bossScriptable.BountyReward);
 
         // Cool effects and sounds
+    }
+
+    private void DespawnTimer()
+    {
+        if(aliveTime <= 0)
+        {
+            Despawn();
+            FightManager.StartWave();
+        }
+        aliveTime -= Time.deltaTime;
     }
 }

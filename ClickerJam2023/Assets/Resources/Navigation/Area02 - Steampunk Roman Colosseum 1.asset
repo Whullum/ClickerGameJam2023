@@ -28,4 +28,5 @@ MonoBehaviour:
   CompanionLore: I don't like this place. The poeple from the old Roman empire where
     better than this cheap alternative copy.
   BossPrefab: {fileID: 1410207690174571512, guid: 6c1f9935611a1eb4a98af420c84707a6, type: 3}
+  Wave: {fileID: 11400000, guid: 659c49ec3ed0358409e7ea7fee94f11f, type: 2}
   BackgroundImage: {fileID: 0}

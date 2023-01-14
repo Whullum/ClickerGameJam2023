@@ -18,7 +18,7 @@ MonoBehaviour:
   EffectIncreaseRatio: 50
   CostIncreaseRatio: 0.5
   NextUpgrade: {fileID: 0}
-  NextUpgradeUnlockCount: 5
+  NextUpgradeUnlockCount: 0
   TimesUnlocked: 0
   Unlocked: 0
   Type: 0

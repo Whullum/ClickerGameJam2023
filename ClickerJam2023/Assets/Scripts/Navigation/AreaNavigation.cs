@@ -23,10 +23,7 @@ public class AreaNavigation : MonoBehaviour
     private void Awake()
     {
         LoadAreasScriptables();
-    }
 
-    private void Start()
-    {
         // For now we start on a predefined area. In the near future we need to load the last area the plaeyr was on.
         NavigateArea(areaToLoad);
     }

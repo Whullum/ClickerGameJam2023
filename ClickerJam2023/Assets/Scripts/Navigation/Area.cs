@@ -11,5 +11,6 @@ public class Area : ScriptableObject
     [TextArea(5, 100)]
     public string CompanionLore;
     public BossEnemy BossPrefab;
+    public Wave Wave;
     public Sprite BackgroundImage;
 }

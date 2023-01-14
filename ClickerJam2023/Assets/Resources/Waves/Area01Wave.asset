@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33449be4ccfb8894a81f85bcdb38e8b5, type: 3}
-  m_Name: FirstBoss
+  m_Script: {fileID: 11500000, guid: f11bc27888f7e454f88aca3bb446954b, type: 3}
+  m_Name: Area01Wave
   m_EditorClassIdentifier: 
-  ID: 0
-  MaxHealth: 50
-  HealthRegenRatio: 1
-  ActiveTime: 5
-  Name: Pretty Boy
-  Lore: A tiny cool looking creature. What a shame that a price is on his head.
-  BountyReward: 100
+  WaveName: 
+  EnemyCount: 50
+  MinEnemyHealth: 3
+  MaxEnemyHealth: 6
+  MinGoldPerKill: 1
+  MaxGoldPerKill: 3
+  EnemySprite: {fileID: 2800000, guid: 7c05578092876a0458b8b480269aef86, type: 3}

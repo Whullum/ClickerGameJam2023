@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: BiggerPockets
   m_EditorClassIdentifier: 
   GUID: 8108c8e8-3b3a-4417-8f55-6855ee4a3142
-  Cost: 40
+  Cost: 5
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 10
   CostIncreaseRatio: 1
   NextUpgrade: {fileID: 11400000, guid: 0fe16f0013ca65041b8af395fac8c6dc, type: 2}
-  NextUpgradeUnlockCount: 5
-  TimesUnlocked: 1
+  NextUpgradeUnlockCount: 25
+  TimesUnlocked: 0
   Unlocked: 1
   Type: 2

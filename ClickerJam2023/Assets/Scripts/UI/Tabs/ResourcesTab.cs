@@ -59,7 +59,7 @@ public class ResourcesTab : MonoBehaviour
         income.text = PlayerWallet.GoldPerClick.ToString();
         idleIncome.text = PlayerWallet.MoneyIncome.ToString();
         damage.text = PlayerRevolver.Damage.ToString();
-        idleDamage.text = PlayerRevolver.IDLEDamage.ToString();
+        idleDamage.text = PlayerRevolver.PassiveDamage.ToString();
         totalSpend.text = PlayerWallet.TotalMoneySpend.ToString();
     }
 

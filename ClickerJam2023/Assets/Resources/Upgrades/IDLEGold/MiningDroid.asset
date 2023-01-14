@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: MiningDroid
   m_EditorClassIdentifier: 
   GUID: e7ee45a3-4500-43e1-9ea1-7a8de68e0363
-  Cost: 212
+  Cost: 92
   BaseValueUpgrade: 10
   EffectIncreaseRatio: 15
   CostIncreaseRatio: 1.3
   NextUpgrade: {fileID: 11400000, guid: af864a874c80a5b47a85210e89aaedaf, type: 2}
-  NextUpgradeUnlockCount: 2
-  TimesUnlocked: 6
+  NextUpgradeUnlockCount: 15
+  TimesUnlocked: 5
   Unlocked: 1
   Type: 3

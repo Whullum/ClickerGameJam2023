@@ -32,4 +32,5 @@ MonoBehaviour:
     some of you money and then I can generate an interest from it.\n\nYou don't understand
     anything, but what else you can do with that much money?"
   BossPrefab: {fileID: 1410207690174571512, guid: 6d52f47d3fd2fc8408e9cf53cca9ad46, type: 3}
+  Wave: {fileID: 11400000, guid: a658ceafc355bf242a9c95a88bd0ff75, type: 2}
   BackgroundImage: {fileID: 0}
