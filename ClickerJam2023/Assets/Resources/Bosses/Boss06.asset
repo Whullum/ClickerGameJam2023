@@ -16,5 +16,10 @@ MonoBehaviour:
   MaxHealth: 5000
   HealthRegenRatio: 1
   Name: Steampunk Jupiter
-  Lore: A tiny cool looking creature. What a shame that a price is on his head.
+  Lore: 'Apparently the Roman gods exist in this world too. Maybe they had a hand
+    in their rapid early development?
+
+
+    Don''t call this guy Zeus. Please. For
+    your sake.'
   BountyReward: 100

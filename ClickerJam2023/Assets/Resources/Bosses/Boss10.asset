@@ -16,5 +16,10 @@ MonoBehaviour:
   MaxHealth: 100000
   HealthRegenRatio: 2
   Name: Tumbleweed Tom
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'A being of enourmous power and great evil. Thousands of bounty hunters have
+    died to this creature. Your archnemesis.
+
+
+    Because nothing is more dangerous
+    than a tumbleweed with a gun.'
   BountyReward: 1500

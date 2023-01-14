@@ -16,5 +16,10 @@ MonoBehaviour:
   MaxHealth: 50000
   HealthRegenRatio: 2
   Name: God of the Last Legend
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'This being calls actually hates calling themselves a god and prefers to
+    use the title "The Final Boss of Last Legend".
+
+
+    Wait, are your bullets eqipped
+    to kill gods? How did we even get to this point?'
   BountyReward: 1200

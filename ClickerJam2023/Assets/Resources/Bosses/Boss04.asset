@@ -16,5 +16,10 @@ MonoBehaviour:
   MaxHealth: 1000
   HealthRegenRatio: 2
   Name: Werewolf Vice President
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'A werewolf that works for the vampire corperation Fang, inc. In this dimention,
+    werewolves and vampires get along quite well.
+
+
+    Their benefits and insurance
+    package includes dental. In any other situation I''d kill to be this guy.'
   BountyReward: 1200

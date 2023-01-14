@@ -16,5 +16,8 @@ MonoBehaviour:
   MaxHealth: 20000
   HealthRegenRatio: 2
   Name: Vampire CEO
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: "The CEO of Fang, inc. On the surface he's charming, but he's as corrupt
+    as can be.\n\nDo we have bullets in the shape of a wooden stake? Would those
+    even work? There's so many different types of vampies in each dimention that
+    I don't know what this guy's weakness is. \n\nJust start blasing or something. "
   BountyReward: 800

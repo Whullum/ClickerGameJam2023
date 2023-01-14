@@ -16,5 +16,9 @@ MonoBehaviour:
   MaxHealth: 200
   HealthRegenRatio: 2
   Name: Steampunk Spartain
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'A warrior from a dimention where machinary and indistrialization were developed
+    much earlier than our own.
+
+
+    They really love their clocks and gears, huh?'
   BountyReward: 500

@@ -16,5 +16,9 @@ MonoBehaviour:
   MaxHealth: 500
   HealthRegenRatio: 2
   Name: A Horde of Dino Zombies
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'Failed dinosaur experiements made in an attempt to revive the past.
+
+
+    These
+    would make for a horrible amusement park attraction.'
   BountyReward: 800

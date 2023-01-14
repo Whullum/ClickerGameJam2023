@@ -16,5 +16,10 @@ MonoBehaviour:
   MaxHealth: 50
   HealthRegenRatio: 1
   Name: Rock Cowboy
-  Lore: A tiny cool looking creature. What a shame that a price is on his head.
+  Lore: 'A rock with googly eyes. For some reason, these can be found in almost every
+    universe, observing with a watchful eye.
+
+
+    It''s kinda cute looking, actually.
+    Who put a bounty on it?'
   BountyReward: 100

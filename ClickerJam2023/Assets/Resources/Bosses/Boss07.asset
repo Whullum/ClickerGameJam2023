@@ -16,5 +16,9 @@ MonoBehaviour:
   MaxHealth: 10000
   HealthRegenRatio: 2
   Name: T-Rex Scientist
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'A genius scientist who turned himself into a T-Rex. Guess he really likes
+    dinosaurs.
+
+
+    How does he use those small arms of his?'
   BountyReward: 500

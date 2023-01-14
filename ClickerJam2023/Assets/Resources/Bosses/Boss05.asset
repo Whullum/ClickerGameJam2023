@@ -16,5 +16,10 @@ MonoBehaviour:
   MaxHealth: 2000
   HealthRegenRatio: 2
   Name: Some Bartender???
-  Lore: A tiny bad looking creature. What a shame that a price is on his head.
+  Lore: 'A bartender from another world? No idea where this person came from, but
+    the sensors say that she''s not from this dimention.
+
+
+    Those drinks she''s
+    mixing look pretty good though.'
   BountyReward: 1500
