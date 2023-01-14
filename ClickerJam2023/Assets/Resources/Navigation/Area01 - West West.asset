@@ -15,21 +15,8 @@ MonoBehaviour:
   ID: 0
   Name: West West
   Unlocked: 1
-  Lore: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in
-    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including
-    versions of Lorem Ipsum.
-  CompanionLore: "Looking around this strange universe, you see a rare creature coming
-    towards you. You prepare yourself for the coming battle, but suddenly the creature
-    stops, makes some beep noises as you never heard of and then you hear a voice
-    talking to you, first you panicked, becasuse you didn't know where that voice
-    come from. Suddenly you realize this creature can talk without a mouth! \n\n-
-    Hello humanoid creature. Do you want to make a profit?\n- How?\n- Just lend me
-    some of you money and then I can generate an interest from it.\n\nYou don't understand
-    anything, but what else you can do with that much money?"
+  Lore: A lawless land of sand and crime. Your home dimention. Bounty hunting is
+    hard work, but it makes quite a hefty profit.
+  CompanionLore: Hey, can I get a pair of googly eyes like that?
   BossPrefab: {fileID: 1410207690174571512, guid: 6d52f47d3fd2fc8408e9cf53cca9ad46, type: 3}
   BackgroundImage: {fileID: 0}

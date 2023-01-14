@@ -15,17 +15,9 @@ MonoBehaviour:
   ID: 4
   Name: Dino Lab
   Unlocked: 1
-  Lore: There are many variations of passages of Lorem Ipsum available, but the majority
-    have suffered alteration in some form, by injected humour, or randomised words
-    which don't look even slightly believable. If you are going to use a passage
-    of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-    in the middle of text. All the Lorem Ipsum generators on the Internet tend to
-    repeat predefined chunks as necessary, making this the first true generator on
-    the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
-    of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-    The generated Lorem Ipsum is therefore always free from repetition, injected
-    humour, or non-characteristic words etc.
-  CompanionLore: I don't like this place. The poeple from the old Roman empire where
-    better than this cheap alternative copy.
+  Lore: The inner workings of the dino lab that attempted to revive the dinosaurs.
+    Apparently, the corporation that runs it is called the Parasol Conglomarate.
+  CompanionLore: Wait, so this guy turned HIMSELF into a T-Rex? That's actually kind
+    of cool.
   BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
   BackgroundImage: {fileID: 0}
