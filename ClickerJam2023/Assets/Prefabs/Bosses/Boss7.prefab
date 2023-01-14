@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1128828212273113188}
   - component: {fileID: 1410207690174571512}
   m_Layer: 0
-  m_Name: FirstBoss
+  m_Name: Boss7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 187755923, guid: ee13817dc44451742a390625394f2110, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcce11d738e806343acea429af291a31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9998f98e056a13047a8810b30e2d018c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossScriptable: {fileID: 11400000, guid: acd88048ff767ab4a833ab20b8040010, type: 2}
+  bossScriptable: {fileID: 11400000, guid: 6d9c052989b272a4fb2cbd15ae4e6884, type: 2}

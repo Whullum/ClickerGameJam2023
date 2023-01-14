@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Area04 - Dino
   m_EditorClassIdentifier: 
   ID: 3
-  Name: Dinosaur Zombie Apocalypse
+  Name: Dino Zombie Horde
   Unlocked: 1
   Lore: There are many variations of passages of Lorem Ipsum available, but the majority
     have suffered alteration in some form, by injected humour, or randomised words
@@ -27,5 +27,5 @@ MonoBehaviour:
     humour, or non-characteristic words etc.
   CompanionLore: I don't like this place. The poeple from the old Roman empire where
     better than this cheap alternative copy.
-  BossPrefab: {fileID: 1410207690174571512, guid: 6c1f9935611a1eb4a98af420c84707a6, type: 3}
+  BossPrefab: {fileID: 1410207690174571512, guid: a52ea178c66c0ae418a0dfa85db03736, type: 3}
   BackgroundImage: {fileID: 0}

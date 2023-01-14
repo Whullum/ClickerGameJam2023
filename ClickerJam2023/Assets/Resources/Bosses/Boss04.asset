@@ -15,6 +15,6 @@ MonoBehaviour:
   ID: 3
   MaxHealth: 1000
   HealthRegenRatio: 2
-  Name: Ugly  Boy
+  Name: Werewolf Vice President
   Lore: A tiny bad looking creature. What a shame that a price is on his head.
   BountyReward: 1200

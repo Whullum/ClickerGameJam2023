@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
-  m_Name: Area05 - Fantasy
+  m_Name: Area10 - Archnemesis
   m_EditorClassIdentifier: 
   ID: 4
-  Name: Fantasy Bartender
+  Name: Wild Wastelands
   Unlocked: 1
   Lore: There are many variations of passages of Lorem Ipsum available, but the majority
     have suffered alteration in some form, by injected humour, or randomised words
@@ -27,5 +27,5 @@ MonoBehaviour:
     humour, or non-characteristic words etc.
   CompanionLore: I don't like this place. The poeple from the old Roman empire where
     better than this cheap alternative copy.
-  BossPrefab: {fileID: 1410207690174571512, guid: e7e092ce748f3b24d80147733bd27cd2, type: 3}
+  BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
   BackgroundImage: {fileID: 0}
