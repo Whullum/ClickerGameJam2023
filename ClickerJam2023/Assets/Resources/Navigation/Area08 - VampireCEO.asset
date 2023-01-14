@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
   m_Name: Area08 - VampireCEO
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 7
   Name: Vampire Inc. Main Branch
   Unlocked: 1
   Lore: 'The highest branch of Fang, inc. in the top office. '
   CompanionLore: The view from here is pretty nice, actually.
-  BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
+  BossPrefab: {fileID: 1410207690174571512, guid: 6092ccaae58dc894e84e5737009b747b, type: 3}
   BackgroundImage: {fileID: 0}
+  musicModeID: 2

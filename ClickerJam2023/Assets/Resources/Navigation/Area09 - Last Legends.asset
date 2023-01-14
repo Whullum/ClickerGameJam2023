@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
   m_Name: Area09 - Last Legends
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 8
   Name: Last Legends Heavens
   Unlocked: 1
   Lore: 'The fourteenth and final area in the acclaimed dimentional meeting palce,
     Last Legends. '
   CompanionLore: My sensores are picking up some sort of advertisements for "free
     levels"? What the heck is a level? Does it get us more money?
-  BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
+  BossPrefab: {fileID: 1410207690174571512, guid: 91935847820060b49b421f79f9457482, type: 3}
   BackgroundImage: {fileID: 0}
+  musicModeID: 4

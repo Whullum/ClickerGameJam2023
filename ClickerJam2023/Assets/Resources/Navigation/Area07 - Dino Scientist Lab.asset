@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
   m_Name: Area07 - Dino Scientist Lab
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 6
   Name: Dino Lab
   Unlocked: 1
   Lore: The inner workings of the dino lab that attempted to revive the dinosaurs.
     Apparently, the corporation that runs it is called the Parasol Conglomarate.
   CompanionLore: Wait, so this guy turned HIMSELF into a T-Rex? That's actually kind
     of cool.
-  BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
+  BossPrefab: {fileID: 1410207690174571512, guid: dc2f362c9321b5b40bc8a350d2c2e2a8, type: 3}
   BackgroundImage: {fileID: 0}
+  musicModeID: 3

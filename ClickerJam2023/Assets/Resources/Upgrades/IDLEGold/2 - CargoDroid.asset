@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUID: bf03faf6-08dd-482c-8573-81327e779249
   Cost: 50
-  BaseValueUpgrade: 2
+  BaseValueUpgrade: 5
   EffectIncreaseRatio: 20
   CostIncreaseRatio: 1.5
   NextUpgrade: {fileID: 11400000, guid: 52478b5bd55d310478b2206ce8a28115, type: 2}

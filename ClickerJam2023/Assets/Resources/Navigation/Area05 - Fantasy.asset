@@ -26,3 +26,4 @@ MonoBehaviour:
     even make sense?'
   BossPrefab: {fileID: 1410207690174571512, guid: e7e092ce748f3b24d80147733bd27cd2, type: 3}
   BackgroundImage: {fileID: 0}
+  musicModeID: 4

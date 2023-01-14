@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
-  m_Name: Area04 - Dino
+  m_Name: Area04 - Vampire
   m_EditorClassIdentifier: 
   ID: 3
-  Name: Dino Zombie Horde
+  Name: Vampire Inc. Side Branch
   Unlocked: 1
-  Lore: Some sort of laboratory where they experimented on dinosaurs to bring them
-    back to life. For legal purposes, this is not a park and these dinosaurs are
-    not from the Jurassic period.
-  CompanionLore: Who came up with the idea of zombie dinosaurs? As if fighting one
-    wasn't bad enough.
+  Lore: A dimention with supernatural beings and monsters who rule over humans with
+    an iron fist. They're not here to steal your blood. They want your money.
+  CompanionLore: Do we need silver bullets for this guy?
   BossPrefab: {fileID: 1410207690174571512, guid: a52ea178c66c0ae418a0dfa85db03736, type: 3}
   BackgroundImage: {fileID: 0}
+  musicModeID: 2

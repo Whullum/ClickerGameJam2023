@@ -19,6 +19,6 @@ MonoBehaviour:
   CostIncreaseRatio: 0.8
   NextUpgrade: {fileID: 11400000, guid: 09f2ca86b7e828242b376725a78243d6, type: 2}
   NextUpgradeUnlockCount: 5
-  TimesUnlocked: 5
+  TimesUnlocked: 0
   Unlocked: 1
   Type: 1

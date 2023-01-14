@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
   m_Name: Area06 - Steampunk Jupiter
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 5
   Name: A Fight With The Gods
   Unlocked: 1
   Lore: Upon futher inspection, it seems the gods have blessed this dimention in
@@ -21,3 +21,4 @@ MonoBehaviour:
     Is that Roman or something?
   BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
   BackgroundImage: {fileID: 0}
+  musicModeID: 1

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GUID: e4227504-e3ff-41f1-8c94-fe6eceb2b43c
   Cost: 10
-  BaseValueUpgrade: 3
+  BaseValueUpgrade: 20
   EffectIncreaseRatio: 30
-  CostIncreaseRatio: 1.6
+  CostIncreaseRatio: 1.8
   NextUpgrade: {fileID: 11400000, guid: f0501addb1e576d4fa510feaaeda3979, type: 2}
   NextUpgradeUnlockCount: 5
   TimesUnlocked: 0

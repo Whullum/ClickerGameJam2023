@@ -12,4 +12,5 @@ public class Area : ScriptableObject
     public string CompanionLore;
     public BossEnemy BossPrefab;
     public Sprite BackgroundImage;
+    public int musicModeID;
 }
