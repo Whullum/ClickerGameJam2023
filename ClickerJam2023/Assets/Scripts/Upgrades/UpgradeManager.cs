@@ -84,7 +84,7 @@ public class UpgradeManager : MonoBehaviour
                 PlayerRevolver.UpgradeDamage(upgrade.Value - previousValue);
                 break;
             case UpgradeType.IDLE_Revolver_Damage:
-                PlayerRevolver.UpgradeIDLEDamage(upgrade.Value - previousValue);
+                PlayerRevolver.UpgradePassiveDamage(upgrade.Value - previousValue);
                 break;
             case UpgradeType.Gold_Collection:
                 PlayerWallet.IncreaseGoldPerClick(upgrade.Value - previousValue);

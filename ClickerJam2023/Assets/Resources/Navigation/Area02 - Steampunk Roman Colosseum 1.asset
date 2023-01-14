@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 349e72c9d99c517489d49e9370a75953, type: 3}
-  m_Name: test
+  m_Name: Area02 - Steampunk Roman Colosseum 1
   m_EditorClassIdentifier: 
-  ID: 2
-  Name: test
-  Unlocked: 0
+  ID: 1
+  Name: Steampunk Roman Colosseum
+  Unlocked: 1
   Lore: There are many variations of passages of Lorem Ipsum available, but the majority
     have suffered alteration in some form, by injected humour, or randomised words
     which don't look even slightly believable. If you are going to use a passage
@@ -28,5 +28,5 @@ MonoBehaviour:
   CompanionLore: I don't like this place. The poeple from the old Roman empire where
     better than this cheap alternative copy.
   BossPrefab: {fileID: 1410207690174571512, guid: 6c1f9935611a1eb4a98af420c84707a6, type: 3}
-  Wave: {fileID: 11400000, guid: 8b7d4082d3a255644a30edb13b6fb6d2, type: 2}
+  Wave: {fileID: 11400000, guid: 659c49ec3ed0358409e7ea7fee94f11f, type: 2}
   BackgroundImage: {fileID: 0}

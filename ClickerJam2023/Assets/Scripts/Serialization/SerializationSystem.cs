@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -18,7 +17,7 @@ public class SerializationSystem
     {
         SaveGameData(baseGameDataSave);
 
-        Debug.Log("Sucess creating new game base data.");
+        Debug.Log("Success creating new game base data.");
     }
 
     public static GameData LoadGameData()

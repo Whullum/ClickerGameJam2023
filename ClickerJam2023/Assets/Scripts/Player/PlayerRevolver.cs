@@ -20,13 +20,13 @@ public class PlayerRevolver : MonoBehaviour
         get { return damage; }
     }
 
-    public static int IDLEDamage
+    public static int PassiveDamage
     {
-        get { return idleDamage; }
+        get { return passiveDamage; }
     }
 
     private static int damage = 1;
-    private static int idleDamage;
+    private static int passiveDamage = 0;
 
     private void Start()
     {
@@ -52,5 +52,5 @@ public class PlayerRevolver : MonoBehaviour
 
     public static void UpgradeDamage(int addAmount) => damage += addAmount;
 
-    public static void UpgradeIDLEDamage(int addAmount) => idleDamage += addAmount;
+    public static void UpgradePassiveDamage(int addAmount) => passiveDamage += addAmount;
 }
