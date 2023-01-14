@@ -12,6 +12,7 @@ public class WaveSystem : MonoBehaviour
     private int enemyCount;
     private int currentEnemyHealth;
     private int currentMaxEnemyHealth;
+    private int currentEnemyReward;
 
     private void Awake()
     {
@@ -68,6 +69,7 @@ public class WaveSystem : MonoBehaviour
                 playerDamage -= currentEnemyHealth;
                 currentEnemyHealth = currentMaxEnemyHealth;
                 enemyCount--;
+                PlayerWallet.AddMoney(currentEnemyReward);
                 totalEnemiesKilled++;
                 CreateNewEnemy();
 
@@ -81,6 +83,7 @@ public class WaveSystem : MonoBehaviour
     private void CreateNewEnemy()
     {
         currentMaxEnemyHealth = Random.Range(waveData.MinEnemyHealth, waveData.MaxEnemyHealth + 1);
+        currentEnemyReward= Random.Range(waveData.MinGoldPerKill, waveData.MaxGoldPerKill + 1);
         currentEnemyHealth = currentMaxEnemyHealth;
     }
 
