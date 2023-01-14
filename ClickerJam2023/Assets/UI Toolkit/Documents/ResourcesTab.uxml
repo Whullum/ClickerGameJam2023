@@ -11,11 +11,23 @@
         <ui:VisualElement name="dataContainer" class="container" style="margin-bottom: 20px;">
             <ui:VisualElement name="row" class="row">
                 <ui:Label text="Passive income (s)" display-tooltip-when-elided="true" class="row-text" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="idleIncome" class="row-value" style="color: rgb(0, 255, 0);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="row" class="row">
+                <ui:Label text="Gold per click" display-tooltip-when-elided="true" class="row-text" />
                 <ui:Label text="0" display-tooltip-when-elided="true" name="income" class="row-value" style="color: rgb(0, 255, 0);" />
             </ui:VisualElement>
             <ui:VisualElement name="row" class="row">
+                <ui:Label text="Revolver damage" display-tooltip-when-elided="true" class="row-text" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="damage" class="row-value" style="color: rgb(255, 0, 0);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="row" class="row">
+                <ui:Label text="Passive revolver damage" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="idleDamage" class="row-value" style="color: rgb(255, 0, 0);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="row" class="row">
                 <ui:Label text="Total gold spend" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
-                <ui:Label text="0" display-tooltip-when-elided="true" name="totalSpend" class="row-value" style="color: rgb(255, 0, 0);" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="totalSpend" class="row-value" style="color: rgb(255, 103, 0);" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="traderContainer" style="width: 100%; flex-direction: row; align-items: center;">

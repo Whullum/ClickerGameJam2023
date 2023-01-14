@@ -50,7 +50,7 @@
     justify-content: flex-end;
     align-items: stretch;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .row-text {
@@ -78,7 +78,7 @@
     width: 400px;
     height: 400px;
     -unity-background-scale-mode: scale-to-fit;
-    -unity-background-image-tint-color: rgba(231, 200, 88, 255);
+    -unity-background-image-tint-color: rgb(231, 200, 88);
     scale: 1.1 1.1;
     transition-duration: 0.2s;
 }

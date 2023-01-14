@@ -38,10 +38,10 @@ public class PlayerWallet : MonoBehaviour
     // Called when something changes inside the wallet.
     public static Action WalletUpdated;
 
-    private static int wallet = 100;
+    private static int wallet = 0;
     private static int moneyIncome = 0; // Amount of money the player gets when reached incomeRatio.
     private static int totalMoneySpend = 0;
-    private static int goldPerClick = 0;
+    private static int goldPerClick = 1;
     private float nextIncomeTime;
 
     private void Update()

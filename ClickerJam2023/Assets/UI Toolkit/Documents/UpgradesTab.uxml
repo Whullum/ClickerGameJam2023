@@ -12,10 +12,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="explodingRoundsButton" class="basic-button revolver-button">
@@ -23,10 +40,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="uraniumLacedPointsButton" class="basic-button revolver-button">
@@ -34,10 +68,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
@@ -48,10 +99,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="rocketDroidButton" class="basic-button idle-revolver-button">
@@ -59,10 +127,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="swarmerDroidButton" class="basic-button idle-revolver-button">
@@ -70,10 +155,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="megaDroidButton" class="basic-button idle-revolver-button">
@@ -81,10 +183,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="atk" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
@@ -95,10 +214,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="eagleEyeButton" class="basic-button gold-button">
@@ -106,10 +242,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
@@ -120,10 +273,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="cargoDroidButton" class="basic-button idle-gold-button">
@@ -131,10 +301,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="merchantDroidButton" class="basic-button idle-gold-button">
@@ -142,10 +329,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="smartInvestmentsButton" class="basic-button idle-gold-button">
@@ -153,10 +357,27 @@
                 <ui:VisualElement class="revolver-data-container">
                     <ui:Label text="0" display-tooltip-when-elided="true" name="cost" class="upgrade-name-text" />
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
-                    <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="upgrade-tooltip-text value-text" />
-                    <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Current upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="value" class="value-text upgrade-tooltip-text" style="color: rgb(200, 200, 200); -unity-font-style: bold-and-italic;" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="tooltip-container">
+                        <ui:VisualElement>
+                            <ui:Label text="Next upgrade" display-tooltip-when-elided="true" class="tooltip-title" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="+" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                            <ui:Label text="0" display-tooltip-when-elided="true" name="nextValue" class="upgrade-tooltip-text value-text" style="-unity-font-style: bold-and-italic; color: rgb(200, 200, 200);" />
+                            <ui:Label text="gold" display-tooltip-when-elided="true" class="upgrade-tooltip-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

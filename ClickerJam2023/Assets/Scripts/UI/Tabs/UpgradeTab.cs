@@ -23,8 +23,8 @@ public class UpgradeTab : MonoBehaviour
     private VisualElement eagleEyeButton;
     // IDLE gold buttons
     private VisualElement miningDroidButton;
-    private VisualElement merchantDroidButton;
     private VisualElement cargoDroidButton;
+    private VisualElement merchantDroidButton;
     private VisualElement smartInvestmentsButton;
     private Label wallet;
 
@@ -40,8 +40,8 @@ public class UpgradeTab : MonoBehaviour
     [SerializeField] private Upgrade biggerPocketsUpgrade;
     [SerializeField] private Upgrade eagleEyeUpgrade;
     [SerializeField] private Upgrade miningDroidUpgrade;
-    [SerializeField] private Upgrade merchantDroidUpgrade;
     [SerializeField] private Upgrade cargoDroidUpgrade;
+    [SerializeField] private Upgrade merchantDroidUpgrade;
     [SerializeField] private Upgrade smartInvestmentsUpgrade;
 
     private void Awake()
@@ -78,24 +78,10 @@ public class UpgradeTab : MonoBehaviour
         biggerPocketsButton = content.Q<VisualElement>("biggerPocketsButton");
         eagleEyeButton = content.Q<VisualElement>("eagleEyeButton");
         miningDroidButton = content.Q<VisualElement>("miningDroidButton");
-        merchantDroidButton = content.Q<VisualElement>("merchantDroidButton");
         cargoDroidButton = content.Q<VisualElement>("cargoDroidButton");
+        merchantDroidButton = content.Q<VisualElement>("merchantDroidButton");
         smartInvestmentsButton = content.Q<VisualElement>("smartInvestmentsButton");
         wallet = content.Q<Label>("wallet");
-
-        /*reinforcedBarrelButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, reinforcedBarrelUpgrade);
-        explodingRoundsButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, explodingRoundsUpgrade);
-        uraniumLacedPointsButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, uraniumLacedPointsUpgrade);
-        combatDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, combatDroidUpgrade);
-        rocketDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, rocketDroidUpgrade);
-        swarmerDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, swarmerDroidUpgrade);
-        megaDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, megaDroidUpgrade);
-        biggerPocketsButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, biggerPocketsUpgrade);
-        eagleEyeButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, eagleEyeUpgrade);
-        miningDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, miningDroidUpgrade);
-        merchantDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, merchantDroidUpgrade);
-        cargoDroidButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, cargoDroidUpgrade);
-        smartInvestmentsButton.RegisterCallback<MouseDownEvent, Upgrade>(ClickButton, smartInvestmentsUpgrade);*/
 
         allButtons.Add(reinforcedBarrelUpgrade.GUID, reinforcedBarrelButton);
         allButtons.Add(explodingRoundsUpgrade.GUID, explodingRoundsButton);
@@ -107,8 +93,8 @@ public class UpgradeTab : MonoBehaviour
         allButtons.Add(biggerPocketsUpgrade.GUID, biggerPocketsButton);
         allButtons.Add(eagleEyeUpgrade.GUID, eagleEyeButton);
         allButtons.Add(miningDroidUpgrade.GUID, miningDroidButton);
-        allButtons.Add(merchantDroidUpgrade.GUID, merchantDroidButton);
         allButtons.Add(cargoDroidUpgrade.GUID, cargoDroidButton);
+        allButtons.Add(merchantDroidUpgrade.GUID, merchantDroidButton);
         allButtons.Add(smartInvestmentsUpgrade.GUID, smartInvestmentsButton);
 
         foreach (KeyValuePair<string, VisualElement> item in allButtons)
@@ -128,22 +114,62 @@ public class UpgradeTab : MonoBehaviour
 
     private void UpdateButtons()
     {
+        var nextUpgradeUnlockCount = 0;
+
         foreach (KeyValuePair<string, VisualElement> item in allButtons)
         {
             Upgrade data = UpgradeManager.GetUpgrade(item.Key);
 
             if (item.Key == data.GUID)
             {
-                Label cost = item.Value.Q<Label>("cost");
-                Label value = item.Value.Q<Label>("value");
+                if (data.Unlocked)
+                {
+                    item.Value.RemoveFromClassList("button-locked");
+                    item.Value.SetEnabled(true);
 
-                cost.text = data.Cost.ToString();
-                value.text = data.Value.ToString();
+                    UQueryBuilder<VisualElement> builder = new UQueryBuilder<VisualElement>(item.Value);
+                    List<VisualElement> result = builder.Build().ToList();
 
-                if (data.Cost > PlayerWallet.Wallet || !data.Unlocked)
+                    result.ForEach(element =>
+                    {
+                        element.style.display = DisplayStyle.Flex;
+                    });
+
+                    Label cost = item.Value.Q<Label>("cost");
+                    Label value = item.Value.Q<Label>("value");
+                    Label nextValue = item.Value.Q<Label>("nextValue");
+
+                    cost.text = data.Cost.ToString();
+                    value.text = data.Value.ToString();
+                    nextValue.text = data.NextValue.ToString();
+
+                    if (data.Cost > PlayerWallet.Wallet)
+                        item.Value.SetEnabled(false);
+                    else item.Value.SetEnabled(true);
+                }
+                else
+                {
+                    item.Value.AddToClassList("button-locked");
                     item.Value.SetEnabled(false);
-                else item.Value.SetEnabled(true);
+
+                    UQueryBuilder<VisualElement> builder = new UQueryBuilder<VisualElement>(item.Value);
+                    List<VisualElement> result = builder.Build().ToList();
+
+                    result.ForEach(element =>
+                    {
+                        Label cost = item.Value.Q<Label>("cost");
+
+                        if (!element.Equals(item.Value))
+                            element.style.display = DisplayStyle.None;
+                        if (element.ClassListContains("revolver-data-container"))
+                            element.style.display = DisplayStyle.Flex;
+
+                        cost.style.display = DisplayStyle.Flex;
+                        cost.text = $"Upgrades until unlock\n\n" + nextUpgradeUnlockCount.ToString();
+                    });
+                }
             }
+            nextUpgradeUnlockCount = data.NextUpgradeUnlockCount - data.TimesUnlocked;
         }
 
         wallet.text = PlayerWallet.Wallet.ToString();
