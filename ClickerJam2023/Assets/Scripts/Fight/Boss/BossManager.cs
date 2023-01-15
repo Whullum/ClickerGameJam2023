@@ -1,5 +1,4 @@
 using System;
-using TreeEditor;
 using UnityEngine;
 
 public class BossManager : MonoBehaviour
@@ -16,15 +15,9 @@ public class BossManager : MonoBehaviour
     private static BossEnemy activeBoss;
     // Boss UI containing the boss health bar.
     private Area areaData;
-    private ParticleSystem revolverHitEffect;
 
     [Tooltip("Point where the boss is going to be placed.")]
     [SerializeField] private Transform bossSpawnPoint;
-
-    private void Awake()
-    {
-        revolverHitEffect = GameObject.Find("RevolverHitEffect").GetComponent<ParticleSystem>();
-    }
 
     private void OnEnable()
     {
@@ -42,7 +35,7 @@ public class BossManager : MonoBehaviour
     private void BossDeath()
     {
         Destroy(activeBoss.gameObject);
-        
+
         BossDefeated?.Invoke();
 
         FightManager.StartWave();
@@ -58,10 +51,7 @@ public class BossManager : MonoBehaviour
         int playerDamage = 0;
 
         if (hitType == HitType.Active)
-        {
-            RevolverHitEffect();
             playerDamage = PlayerRevolver.Damage;
-        }
         else if (hitType == HitType.Passive)
             playerDamage = PlayerRevolver.PassiveDamage;
 
@@ -70,15 +60,6 @@ public class BossManager : MonoBehaviour
     }
 
     private void LoadAreaData(Area data) => areaData = data;
-
-    private void RevolverHitEffect()
-    {
-        var hitPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        hitPosition.z = 0;
-
-        revolverHitEffect.transform.position = hitPosition;
-        revolverHitEffect.Play();
-    }
 
     public void StartBossFight()
     {

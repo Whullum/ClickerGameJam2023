@@ -20,6 +20,11 @@ public class BossEnemy : MonoBehaviour
         get { return currentHealth; }
     }
 
+    public float AliveTimeLeft
+    {
+        get { return aliveTime; }
+    }
+
     private float currentHealth;
     private float aliveTime;
 
@@ -56,7 +61,7 @@ public class BossEnemy : MonoBehaviour
             AddBountyReward();
             return true;
         }
-            
+
         return false;
     }
 
@@ -86,7 +91,7 @@ public class BossEnemy : MonoBehaviour
 
     private void DespawnTimer()
     {
-        if(aliveTime <= 0)
+        if (aliveTime <= 0)
         {
             Despawn();
             FightManager.StartWave();

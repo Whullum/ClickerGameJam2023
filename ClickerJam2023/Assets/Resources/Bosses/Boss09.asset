@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 8
   MaxHealth: 50000
   HealthRegenRatio: 2
+  ActiveTime: 20
   Name: God of the Last Legend
   Lore: 'This being calls actually hates calling themselves a god and prefers to
     use the title "The Final Boss of Last Legend".

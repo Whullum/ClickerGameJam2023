@@ -8,6 +8,8 @@ public class BossFightUI : MonoBehaviour
     private VisualElement fightButton;
     private Label healthValue;
     private Label fightStatusText;
+    private Label fightName;
+    private Label bossTime;
 
     private void Awake()
     {
@@ -21,6 +23,8 @@ public class BossFightUI : MonoBehaviour
         healthValue = root.Q<Label>("healthValue");
         fightStatusText = root.Q<Label>("fightStatusText");
         fightButton = root.Q<VisualElement>("fightButton");
+        fightName = root.Q<Label>("fightName");
+        bossTime = root.Q<Label>("bossTime");
 
         fightButton.RegisterCallback<MouseDownEvent>(StartBossFight);
     }
@@ -45,6 +49,7 @@ public class BossFightUI : MonoBehaviour
         fightButton.AddToClassList("boss-button");
         fightButton.RemoveFromClassList("wave-button");
         fightStatusText.text = "Call the Boss!";
+        bossTime.style.display = DisplayStyle.Flex;
     }
 
     public void ActivateWaveButton()
@@ -52,9 +57,19 @@ public class BossFightUI : MonoBehaviour
         fightButton.SetEnabled(false);
         fightButton.AddToClassList("wave-button");
         fightButton.RemoveFromClassList("boss-button");
+        bossTime.style.display = DisplayStyle.None;
     }
 
     public void DisableBossButton() => fightButton.SetEnabled(false);
+
+    public void UpdateFightTitle(string title) => fightName.text = title;
+
+    public void UpdateBossTimer(float time)
+    {
+        string timer = time.ToString("00.0");
+
+        bossTime.text = timer;
+    }
 
     private void StartBossFight(MouseDownEvent evt) => FightManager.StartBossFight();
 }

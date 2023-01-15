@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 9
   MaxHealth: 100000
   HealthRegenRatio: 2
+  ActiveTime: 20
   Name: Tumbleweed Tom
   Lore: 'A being of enourmous power and great evil. Thousands of bounty hunters have
     died to this creature. Your archnemesis.
