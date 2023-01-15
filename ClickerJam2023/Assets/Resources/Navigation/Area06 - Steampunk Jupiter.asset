@@ -20,5 +20,6 @@ MonoBehaviour:
   CompanionLore: Hey, look it's Zeus! Wait, what do you mean it's not Zeus? Jupiter?
     Is that Roman or something?
   BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
+  Wave: {fileID: 11400000, guid: 574cec9733dc90545a4d6fabeccd4d5d, type: 2}
   BackgroundImage: {fileID: 0}
   musicModeID: 1

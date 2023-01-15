@@ -20,5 +20,6 @@ MonoBehaviour:
   CompanionLore: Wait, so this guy turned HIMSELF into a T-Rex? That's actually kind
     of cool.
   BossPrefab: {fileID: 1410207690174571512, guid: dc2f362c9321b5b40bc8a350d2c2e2a8, type: 3}
+  Wave: {fileID: 11400000, guid: e5a68b76eff9df646a5649e49a9e96d5, type: 2}
   BackgroundImage: {fileID: 0}
   musicModeID: 3

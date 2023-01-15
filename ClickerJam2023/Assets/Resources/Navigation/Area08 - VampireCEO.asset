@@ -18,5 +18,6 @@ MonoBehaviour:
   Lore: 'The highest branch of Fang, inc. in the top office. '
   CompanionLore: The view from here is pretty nice, actually.
   BossPrefab: {fileID: 1410207690174571512, guid: 6092ccaae58dc894e84e5737009b747b, type: 3}
+  Wave: {fileID: 11400000, guid: 67f70a24232da204eb9e37bb5b0770e8, type: 2}
   BackgroundImage: {fileID: 0}
   musicModeID: 2

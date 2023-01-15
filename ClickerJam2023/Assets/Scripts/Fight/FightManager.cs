@@ -35,6 +35,8 @@ public class FightManager : MonoBehaviour
             HitWave(HitType.Active);
         if (fightState == FightState.Boss)
             HitBoss(HitType.Active);
+
+        PlayerRevolver.IsClicking = true;
     }
 
     private void HitBoss(HitType hitType)

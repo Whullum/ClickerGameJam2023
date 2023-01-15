@@ -19,5 +19,6 @@ MonoBehaviour:
     an iron fist. They're not here to steal your blood. They want your money.
   CompanionLore: Do we need silver bullets for this guy?
   BossPrefab: {fileID: 1410207690174571512, guid: a52ea178c66c0ae418a0dfa85db03736, type: 3}
+  Wave: {fileID: 11400000, guid: e4e54f73d16d44349af9dba38f382d09, type: 2}
   BackgroundImage: {fileID: 0}
   musicModeID: 2

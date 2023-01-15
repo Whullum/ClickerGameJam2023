@@ -20,5 +20,6 @@ MonoBehaviour:
     their advancement?
   CompanionLore: If this is a Roman Collosium, why is this guy Spartain?
   BossPrefab: {fileID: 1410207690174571512, guid: 4706b343922bc9349b04383527b318ec, type: 3}
+  Wave: {fileID: 11400000, guid: 717d0a3588d5915489b8210f4dc3bb3d, type: 2}
   BackgroundImage: {fileID: 0}
   musicModeID: 1
