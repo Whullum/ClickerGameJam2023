@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1 - BiggerPockets
   m_EditorClassIdentifier: 
   GUID: 8108c8e8-3b3a-4417-8f55-6855ee4a3142
-  Cost: 5
+  Cost: 20
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 50
   CostIncreaseRatio: 0.4

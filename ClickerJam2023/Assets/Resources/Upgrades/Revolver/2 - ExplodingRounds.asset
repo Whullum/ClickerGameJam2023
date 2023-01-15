@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 2 - ExplodingRounds
   m_EditorClassIdentifier: 
   GUID: 380e6ab5-6536-4275-8684-d75375c12fb7
-  Cost: 40
-  BaseValueUpgrade: 10
+  Cost: 50
+  BaseValueUpgrade: 3
   EffectIncreaseRatio: 115
-  CostIncreaseRatio: 0.15
+  CostIncreaseRatio: 1
   NextUpgrade: {fileID: 11400000, guid: 0e7cd5e2fe643c24fba35743fdbbe7ad, type: 2}
   NextUpgradeUnlockCount: 5
   TimesUnlocked: 0

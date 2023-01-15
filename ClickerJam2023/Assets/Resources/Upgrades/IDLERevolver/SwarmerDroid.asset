@@ -16,9 +16,9 @@ MonoBehaviour:
   Cost: 10
   BaseValueUpgrade: 20
   EffectIncreaseRatio: 30
-  CostIncreaseRatio: 1.8
+  CostIncreaseRatio: 5
   NextUpgrade: {fileID: 11400000, guid: f0501addb1e576d4fa510feaaeda3979, type: 2}
-  NextUpgradeUnlockCount: 30
+  NextUpgradeUnlockCount: 5
   TimesUnlocked: 0
   Unlocked: 0
   Type: 1

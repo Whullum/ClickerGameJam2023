@@ -9,9 +9,6 @@ public class PlayerRevolver : MonoBehaviour
     private static bool isClicking = false;
     public static bool IsClicking { get => isClicking; set => isClicking = value; }
 
-    private float baseAnimationTimer = .1f;
-    private float currentAnimationTime;
-
     /// <summary>
     /// Damage the player does in one click.
     /// </summary>
