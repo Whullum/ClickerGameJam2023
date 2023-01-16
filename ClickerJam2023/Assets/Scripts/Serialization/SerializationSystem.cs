@@ -27,18 +27,6 @@ public class SerializationSystem
         if (!GameManager.Instance.IsNewGame)
             loadID = playerGameDataSave;
 
-        /*if(!File.Exists(loadPath))
-        {
-            Debug.LogWarning("Cannot load save file. File not found.");
-            return null;
-        }
-
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Open(loadPath, FileMode.Open);
-        GameData gameData = formatter.Deserialize(file) as GameData;
-
-        file.Close();*/
-
         string gameData = PlayerPrefs.GetString(loadID);
         GameData data = JsonUtility.FromJson<GameData>(gameData);
 
@@ -57,11 +45,7 @@ public class SerializationSystem
         PlayerPrefs.SetString(id, savedData);
         PlayerPrefs.Save();
 
-        /*BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Create(path);
-        formatter.Serialize(file, gameData);
-
-        file.Close();*/
+        Debug.Log("Successfully saved game data.");
     }
 
     private static UpgradeData[] SaveUpgradesData()
@@ -76,6 +60,11 @@ public class SerializationSystem
         }
 
         return upgradesData;
+    }
+
+    public static void DeletePlayerData()
+    {
+        PlayerPrefs.DeleteKey(playerGameDataSave);
     }
 
     private static WalletData SaveWalletData()

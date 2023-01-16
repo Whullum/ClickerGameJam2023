@@ -889,6 +889,7 @@ GameObject:
   - component: {fileID: 1053861967}
   - component: {fileID: 1053861968}
   - component: {fileID: 1053861969}
+  - component: {fileID: 1053861970}
   m_Layer: 0
   m_Name: HubUI
   m_TagString: Untagged
@@ -1003,6 +1004,18 @@ MonoBehaviour:
   cargoDroidUpgrade: {fileID: 11400000, guid: af864a874c80a5b47a85210e89aaedaf, type: 2}
   merchantDroidUpgrade: {fileID: 11400000, guid: 52478b5bd55d310478b2206ce8a28115, type: 2}
   smartInvestmentsUpgrade: {fileID: 11400000, guid: d5b31cad4b6c9e84896a6750417d1e30, type: 2}
+--- !u!114 &1053861970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053861962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9624e0a3a6d86a840af7f13e5a3cba9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127191045
 GameObject:
   m_ObjectHideFlags: 0

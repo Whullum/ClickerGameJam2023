@@ -7,7 +7,7 @@
     <Style src="project://database/Assets/UI%20Toolkit/USS/hubUI.uss?fileID=7433441132597879392&amp;guid=b5d783a1d9398ce41af24e421b23f2c1&amp;type=3#hubUI" />
     <ui:VisualElement name="hub" style="height: 100%; position: absolute; flex-grow: 1; width: 50%; left: 0; -unity-font-definition: url(&apos;project://database/Assets/Fonts/Envious%20SDF.asset?fileID=11400000&amp;guid=63ab1e82be762e24fbfff12dcf44c826&amp;type=2#Envious SDF&apos;); -unity-font: url(&apos;project://database/Assets/Fonts/Envious.ttf?fileID=12800000&amp;guid=e9e4b7ea8c72a794b9545106e33d6edb&amp;type=3#Envious&apos;);">
         <ui:VisualElement name="content" style="flex-grow: 1; background-color: rgb(113, 182, 202); border-left-color: rgb(52, 124, 144); border-right-color: rgb(52, 124, 144); border-top-color: rgb(52, 124, 144); border-bottom-color: rgb(52, 124, 144); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 0; height: 80%;">
-            <ui:Instance template="UpgradesTab" name="UpgradesTab" style="display: none;" />
+            <ui:Instance template="UpgradesTab" name="UpgradesTab" style="display: none; position: absolute; width: 100%; height: 100%;" />
             <ui:Instance template="ResourcesTab" name="ResourcesTab" style="display: none; flex-grow: 1;" />
             <ui:Instance template="NavigationUI" name="NavigationTab" style="display: none;" />
             <ui:Instance template="EventsTab" name="EventsTab" style="display: none;" />

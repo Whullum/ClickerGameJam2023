@@ -26,6 +26,7 @@ public class UpgradeManager : MonoBehaviour
     private void LoadUpgradeScriptables()
     {
         var upgrades = Resources.LoadAll<Upgrade>("Upgrades");
+        allUpgrades.Clear();
 
         for (int i = 0; i < upgrades.Length; i++)
         {

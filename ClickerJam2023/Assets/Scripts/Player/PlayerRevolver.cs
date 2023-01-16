@@ -30,6 +30,12 @@ public class PlayerRevolver : MonoBehaviour
         playerAnimator.SetBool("IsShooting", isClicking);
     }
 
+    private void OnDisable()
+    {
+        damage = 1;
+        passiveDamage = 0;
+    }
+
     private void Update()
     {
         playerAnimator.SetBool("IsShooting", isClicking);

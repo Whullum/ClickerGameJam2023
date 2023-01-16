@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossEnemy : MonoBehaviour
@@ -15,7 +13,7 @@ public class BossEnemy : MonoBehaviour
     /// <summary>
     /// Current health of this boss.
     /// </summary>
-    public float CurrentHealth
+    public int CurrentHealth
     {
         get { return currentHealth; }
     }
@@ -25,7 +23,7 @@ public class BossEnemy : MonoBehaviour
         get { return aliveTime; }
     }
 
-    private float currentHealth;
+    private int currentHealth;
     private float aliveTime;
 
     [Tooltip("The scriptable object of this boss.")]
@@ -51,7 +49,7 @@ public class BossEnemy : MonoBehaviour
     /// </summary>
     /// <param name="damageAmount">Amount of damage to recieve.</param>
     /// <returns>True if the boss is killed (health <= 0). False if not.</returns>
-    public bool DamageBoss(float damageAmount)
+    public bool DamageBoss(int damageAmount)
     {
         currentHealth -= damageAmount;
 
