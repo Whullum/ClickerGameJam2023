@@ -96,4 +96,12 @@ public class BossEnemy : MonoBehaviour
         }
         aliveTime -= Time.deltaTime;
     }
+
+    public void RegenBoss()
+    {
+        if (currentHealth + bossScriptable.HealthRegenRatio > bossScriptable.MaxHealth)
+            currentHealth = bossScriptable.MaxHealth;
+        else
+            currentHealth += bossScriptable.HealthRegenRatio;
+    }
 }

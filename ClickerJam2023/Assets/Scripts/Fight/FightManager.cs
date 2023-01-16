@@ -28,7 +28,11 @@ public class FightManager : MonoBehaviour
         PassiveHit();
 
         if (fightState == FightState.Boss)
+        {
             fightUI.UpdateBossTimer(BossManager.ActiveBoss.AliveTimeLeft);
+            fightUI.UpdateBossHealth(BossManager.ActiveBoss.CurrentHealth, BossManager.ActiveBoss.BossData.MaxHealth);
+        }
+            
     }
 
     /// <summary>
@@ -57,9 +61,6 @@ public class FightManager : MonoBehaviour
     private void HitBoss(HitType hitType)
     {
         bossManager.HitBoss(hitType);
-
-        // Update the boss UI with the new health values.
-        fightUI.UpdateBossHealth(BossManager.ActiveBoss.CurrentHealth, BossManager.ActiveBoss.BossData.MaxHealth);
     }
 
     private void HitWave(HitType hitType)
@@ -103,6 +104,7 @@ public class FightManager : MonoBehaviour
 
         fightUI.ActivateWaveButton();
         fightUI.UpdateFightTitle(waveSystem.WaveName);
+        fightUI.ShowFeedback("Fight the enemy wave!", 2);
     }
 
     public static void StartBossFight()
@@ -113,5 +115,6 @@ public class FightManager : MonoBehaviour
 
         fightUI.DisableBossButton();
         fightUI.UpdateFightTitle(BossManager.ActiveBoss.BossData.Name);
+        fightUI.ShowFeedback("Defeat the boss in time!", 3);
     }
 }

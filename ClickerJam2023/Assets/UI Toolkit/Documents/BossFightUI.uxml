@@ -12,5 +12,8 @@
         <ui:VisualElement name="fightButton" class="wave-button">
             <ui:Label text="Enemies left 0" display-tooltip-when-elided="true" name="fightStatusText" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-text-align: middle-center; font-size: 15px; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
+        <ui:VisualElement name="fightFeedback" class="feedback-out">
+            <ui:Label text="New area unlocked!" display-tooltip-when-elided="true" name="feedbackText" style="white-space: normal;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

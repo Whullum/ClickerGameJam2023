@@ -15,9 +15,15 @@ public class BossManager : MonoBehaviour
     private static BossEnemy activeBoss;
     // Boss UI containing the boss health bar.
     private Area areaData;
+    private float nextBossRegen;
 
     [Tooltip("Point where the boss is going to be placed.")]
     [SerializeField] private Transform bossSpawnPoint;
+
+    private void Update()
+    {
+        RegenBoss();
+    }
 
     private void OnEnable()
     {
@@ -67,5 +73,17 @@ public class BossManager : MonoBehaviour
 
         // New boss is created and assigned to be the active boss.
         activeBoss = Instantiate(areaData.BossPrefab, bossSpawnPoint.position, Quaternion.identity);
+    }
+
+    private void RegenBoss()
+    {
+        if (activeBoss == null) return;
+
+        if(nextBossRegen <= 0)
+        {
+            activeBoss.RegenBoss();
+            nextBossRegen = 1;
+        }
+        nextBossRegen -= Time.deltaTime;
     }
 }

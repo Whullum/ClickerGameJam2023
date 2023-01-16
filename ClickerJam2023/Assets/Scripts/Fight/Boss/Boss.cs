@@ -5,7 +5,7 @@ public class Boss : ScriptableObject
 {
     public int ID;
     public int MaxHealth;
-    public float HealthRegenRatio;
+    public int HealthRegenRatio;
     public float ActiveTime;
     public string Name;
     [TextArea(5, 50)]
