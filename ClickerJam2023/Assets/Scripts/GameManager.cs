@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using System.Collections;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -19,10 +20,15 @@ public class GameManager : Singleton<GameManager>
         LoadGameData();
     }
 
+    private void Start()
+    {
+        StartCoroutine(AutoSaveData());
+    }
+
     private void FirstSetup()
     {
         // We check if a base data exists, if not we create a new one.
-        if (!File.Exists(SerializationSystem.BaseGameDataSave))
+        if (!PlayerPrefs.HasKey(SerializationSystem.BaseGameDataSave))
             SerializationSystem.SaveInitialUpgradeData();
     }
 
@@ -31,11 +37,14 @@ public class GameManager : Singleton<GameManager>
         GameData gameData = SerializationSystem.LoadGameData();
 
         UpgradeManager.LoadedUpgradeData = gameData.Upgrades;
+        AreaNavigation.AreaData = gameData.Areas;
         PlayerWallet.LoadWalletData(gameData.Wallet.Wallet);
     }
 
-    private void OnApplicationQuit()
+    private IEnumerator AutoSaveData()
     {
+        yield return new WaitForSeconds(10);
         SerializationSystem.SaveGameData(SerializationSystem.PlayerGameDataSave);
+        StartCoroutine(AutoSaveData());
     }
 }

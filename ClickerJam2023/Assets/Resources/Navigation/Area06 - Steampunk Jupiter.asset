@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 5
   Name: A Fight With The Gods
-  Unlocked: 1
+  Unlocked: 0
   Lore: Upon futher inspection, it seems the gods have blessed this dimention in
     particular, which is why they're so advanced despite taking place ealier in time.
   CompanionLore: Hey, look it's Zeus! Wait, what do you mean it's not Zeus? Jupiter?

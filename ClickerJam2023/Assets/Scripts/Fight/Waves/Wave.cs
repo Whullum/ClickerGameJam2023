@@ -9,5 +9,5 @@ public class Wave : ScriptableObject
     public int MaxEnemyHealth;
     public int MinGoldPerKill;
     public int MaxGoldPerKill;
-    public Texture EnemySprite;
+    public Texture2D EnemySprite;
 }

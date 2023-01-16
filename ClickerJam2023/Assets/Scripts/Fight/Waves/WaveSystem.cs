@@ -6,9 +6,11 @@ public class WaveSystem : MonoBehaviour
     public int CurrentEnemyHealth { get { return currentEnemyHealth; } }
     public int CurrentMaxEnemyHealth { get { return currentMaxEnemyHealth; } }
     public int EnemiesLeft { get { return enemyCount; } }
+    public string WaveName { get { return waveData.WaveName; } }
 
     private Wave waveData;
     private ParticleSystem enemyDeathEffect;
+    private SpriteRenderer enemySprite;
     private int enemyCount;
     private int currentEnemyHealth;
     private int currentMaxEnemyHealth;
@@ -16,6 +18,7 @@ public class WaveSystem : MonoBehaviour
 
     private void Awake()
     {
+        enemySprite = GetComponentInChildren<SpriteRenderer>();
         enemyDeathEffect = GameObject.Find("EnemyDeathEffect").GetComponent<ParticleSystem>();
     }
 
@@ -42,7 +45,8 @@ public class WaveSystem : MonoBehaviour
 
         ParticleSystemRenderer particleMaterial = enemyDeathEffect.GetComponent<ParticleSystemRenderer>();
         particleMaterial.material.mainTexture = waveData.EnemySprite;
-
+        enemySprite.gameObject.SetActive(true);
+        enemySprite.sprite = Sprite.Create(waveData.EnemySprite, new Rect(0, 0, waveData.EnemySprite.width, waveData.EnemySprite.height), new Vector2(0.5f, 0.5f));
         CreateNewEnemy();
     }
 
@@ -74,7 +78,10 @@ public class WaveSystem : MonoBehaviour
                 CreateNewEnemy();
 
                 if (enemyCount <= 0)
+                {
+                    enemySprite.gameObject.SetActive(false);
                     FightManager.EnableBossCallButton();
+                }
             }
         }
         StartCoroutine(CreateDeathEnemyParticle(totalEnemiesKilled));

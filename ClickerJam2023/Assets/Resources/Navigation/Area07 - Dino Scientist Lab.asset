@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 6
   Name: Dino Lab
-  Unlocked: 1
+  Unlocked: 0
   Lore: The inner workings of the dino lab that attempted to revive the dinosaurs.
     Apparently, the corporation that runs it is called the Parasol Conglomarate.
   CompanionLore: Wait, so this guy turned HIMSELF into a T-Rex? That's actually kind

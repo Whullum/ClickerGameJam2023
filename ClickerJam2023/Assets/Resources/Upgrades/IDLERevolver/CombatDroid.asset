@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CombatDroid
   m_EditorClassIdentifier: 
   GUID: 1e1a6987-a4b9-469f-9960-c6d23e0d7de0
-  Cost: 290
+  Cost: 2
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 10
   CostIncreaseRatio: 0.8

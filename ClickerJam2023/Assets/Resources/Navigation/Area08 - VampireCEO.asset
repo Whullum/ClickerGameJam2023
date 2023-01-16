@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 7
   Name: Vampire Inc. Main Branch
-  Unlocked: 1
+  Unlocked: 0
   Lore: 'The highest branch of Fang, inc. in the top office. '
   CompanionLore: The view from here is pretty nice, actually.
   BossPrefab: {fileID: 1410207690174571512, guid: 6092ccaae58dc894e84e5737009b747b, type: 3}

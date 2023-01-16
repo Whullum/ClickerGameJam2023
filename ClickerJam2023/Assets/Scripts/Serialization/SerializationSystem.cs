@@ -10,8 +10,8 @@ public class SerializationSystem
     public static string BaseGameDataSave { get { return baseGameDataSave; } }
     public static string PlayerGameDataSave { get { return playerGameDataSave; } }
 
-    private static string baseGameDataSave = Application.persistentDataPath + Path.AltDirectorySeparatorChar + "baseData.dat";
-    private static string playerGameDataSave = Application.persistentDataPath + Path.AltDirectorySeparatorChar + "playerData.dat";
+    private static string baseGameDataSave = "BaseData";
+    private static string playerGameDataSave = "PlayerData";
 
     public static void SaveInitialUpgradeData()
     {
@@ -22,12 +22,12 @@ public class SerializationSystem
 
     public static GameData LoadGameData()
     {
-        string loadPath = baseGameDataSave;
+        string loadID = baseGameDataSave;
 
         if (!GameManager.Instance.IsNewGame)
-            loadPath = playerGameDataSave;
+            loadID = playerGameDataSave;
 
-        if(!File.Exists(loadPath))
+        /*if(!File.Exists(loadPath))
         {
             Debug.LogWarning("Cannot load save file. File not found.");
             return null;
@@ -37,22 +37,31 @@ public class SerializationSystem
         FileStream file = File.Open(loadPath, FileMode.Open);
         GameData gameData = formatter.Deserialize(file) as GameData;
 
-        file.Close();
+        file.Close();*/
 
-        return gameData;
+        string gameData = PlayerPrefs.GetString(loadID);
+        GameData data = JsonUtility.FromJson<GameData>(gameData);
+
+        return data;
     }
 
-    public static void SaveGameData(string path)
+    public static void SaveGameData(string id)
     {
         UpgradeData[] allUpgrades = SaveUpgradesData();
+        AreaData[] areaData = SaveAreaData();
         WalletData wallet = SaveWalletData();
-        GameData gameData = new GameData(allUpgrades, wallet);
+        GameData gameData = new GameData(allUpgrades,areaData, wallet);
 
-        BinaryFormatter formatter = new BinaryFormatter();
+        string savedData = JsonUtility.ToJson(gameData);
+
+        PlayerPrefs.SetString(id, savedData);
+        PlayerPrefs.Save();
+
+        /*BinaryFormatter formatter = new BinaryFormatter();
         FileStream file = File.Create(path);
         formatter.Serialize(file, gameData);
 
-        file.Close();
+        file.Close();*/
     }
 
     private static UpgradeData[] SaveUpgradesData()
@@ -72,5 +81,18 @@ public class SerializationSystem
     private static WalletData SaveWalletData()
     {
         return new WalletData(PlayerWallet.Wallet);
+    }
+
+    private static AreaData[] SaveAreaData()
+    {
+        var areas = Resources.LoadAll<Area>("Navigation");
+        AreaData[] areaData = new AreaData[areas.Length];
+
+        for(int i = 0; i < areaData.Length; i++)
+        {
+            AreaData savedData = new AreaData(areas[i].ID, areas[i].Unlocked, areas[i].Active);
+            areaData[i] = savedData;
+        }
+        return areaData;
     }
 }

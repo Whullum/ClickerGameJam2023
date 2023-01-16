@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 1
   MaxHealth: 200
   HealthRegenRatio: 2
+  ActiveTime: 20
   Name: Steampunk Spartain
   Lore: 'A warrior from a dimention where machinary and indistrialization were developed
     much earlier than our own.

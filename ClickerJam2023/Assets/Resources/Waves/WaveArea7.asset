@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11bc27888f7e454f88aca3bb446954b, type: 3}
   m_Name: WaveArea7
   m_EditorClassIdentifier: 
-  WaveName: 
+  WaveName: Wave
   EnemyCount: 170
   MinEnemyHealth: 20
   MaxEnemyHealth: 30

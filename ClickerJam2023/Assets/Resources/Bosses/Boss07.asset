@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 6
   MaxHealth: 10000
   HealthRegenRatio: 2
+  ActiveTime: 20
   Name: T-Rex Scientist
   Lore: 'A genius scientist who turned himself into a T-Rex. Guess he really likes
     dinosaurs.

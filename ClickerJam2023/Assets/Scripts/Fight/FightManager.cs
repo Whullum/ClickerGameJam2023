@@ -8,9 +8,11 @@ public class FightManager : MonoBehaviour
     private static WaveSystem waveSystem;
     private float hitTimer;
     private static bool canUpdateUI = true; // For keeping the hitWave from updating the UI once all the wave is defeated.
+    private ParticleSystem revolverHitEffect;
 
     private void Awake()
     {
+        revolverHitEffect = GameObject.Find("RevolverHitEffect").GetComponent<ParticleSystem>();
         fightUI = FindObjectOfType<BossFightUI>();
         bossManager = FindObjectOfType<BossManager>();
         waveSystem = FindObjectOfType<WaveSystem>();
@@ -24,6 +26,9 @@ public class FightManager : MonoBehaviour
     private void Update()
     {
         PassiveHit();
+
+        if (fightState == FightState.Boss)
+            fightUI.UpdateBossTimer(BossManager.ActiveBoss.AliveTimeLeft);
     }
 
     /// <summary>
@@ -36,7 +41,17 @@ public class FightManager : MonoBehaviour
         if (fightState == FightState.Boss)
             HitBoss(HitType.Active);
 
+        RevolverHitEffect();
         PlayerRevolver.IsClicking = true;
+    }
+
+    private void RevolverHitEffect()
+    {
+        var hitPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        hitPosition.z = 0;
+
+        revolverHitEffect.transform.position = hitPosition;
+        revolverHitEffect.Play();
     }
 
     private void HitBoss(HitType hitType)
@@ -87,6 +102,7 @@ public class FightManager : MonoBehaviour
         waveSystem.SpawnWave();
 
         fightUI.ActivateWaveButton();
+        fightUI.UpdateFightTitle(waveSystem.WaveName);
     }
 
     public static void StartBossFight()
@@ -96,5 +112,6 @@ public class FightManager : MonoBehaviour
         bossManager.StartBossFight();
 
         fightUI.DisableBossButton();
+        fightUI.UpdateFightTitle(BossManager.ActiveBoss.BossData.Name);
     }
 }

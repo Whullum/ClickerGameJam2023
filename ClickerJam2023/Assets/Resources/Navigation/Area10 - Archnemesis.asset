@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 9
   Name: Wild Wastelands
-  Unlocked: 1
+  Unlocked: 0
   Lore: Your home. Or at least it was until Tom appeared. Now it's just a wasteland.
   CompanionLore: Seems like you've got some history with this... weed? Can't believe
     this was a revenge story this entire time.

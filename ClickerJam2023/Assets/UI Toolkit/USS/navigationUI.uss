@@ -113,10 +113,10 @@
 .text-container {
     rotate: 30deg;
     background-color: rgba(58, 58, 58, 0.39);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -131,12 +131,12 @@
 }
 
 .text-container:hover {
-    rotate: 30deg;
+    rotate: 10deg;
     background-color: rgba(17, 17, 17, 0.78);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -152,8 +152,66 @@
 }
 
 .area-text {
-    font-size: 20px;
+    font-size: 14px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     white-space: normal;
+}
+
+.area-active {
+    width: 256px;
+    height: 156px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(96, 140, 229);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left-color: rgb(70, 79, 166);
+    border-right-color: rgb(70, 79, 166);
+    border-top-color: rgb(70, 79, 166);
+    border-bottom-color: rgb(70, 79, 166);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    transition-duration: 0.2s;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.area-active:hover {
+    width: 256px;
+    height: 156px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(175, 201, 253);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left-color: rgb(67, 80, 207);
+    border-right-color: rgb(67, 80, 207);
+    border-top-color: rgb(67, 80, 207);
+    border-bottom-color: rgb(67, 80, 207);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    transition-duration: 0.2s;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

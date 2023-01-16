@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 8
   Name: Last Legends Heavens
-  Unlocked: 1
+  Unlocked: 0
   Lore: 'The fourteenth and final area in the acclaimed dimentional meeting palce,
     Last Legends. '
   CompanionLore: My sensores are picking up some sort of advertisements for "free

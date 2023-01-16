@@ -9,6 +9,7 @@ public class NavigationTab : MonoBehaviour
     private VisualElement content;
     private VisualElement navigationProgressBar;
     private VisualElement navigationProgress;
+    private VisualElement buttonsContainer;
     private Label navigationText;
     private ParticleSystem areaLoadEffect;
     private bool loadingArea;
@@ -25,9 +26,19 @@ public class NavigationTab : MonoBehaviour
         areaLoadEffect = GetComponentInChildren<ParticleSystem>();
     }
 
+    private void OnEnable()
+    {
+        AreaNavigation.AreaLoaded += CreateLevels;
+    }
+
+    private void OnDisable()
+    {
+        AreaNavigation.AreaLoaded -= CreateLevels;
+    }
+
     private void Start()
     {
-        CreateLevels();
+        CreateLevels(new Area());
     }
 
     private void InitializeDocument()
@@ -35,6 +46,7 @@ public class NavigationTab : MonoBehaviour
         root = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("NavigationTab");
         content = root.Q<VisualElement>("content");
         navigationProgressBar = root.Q<VisualElement>("navigationProgressBar");
+        buttonsContainer = root.Q<VisualElement>("buttonsContainer");
         navigationProgress = root.Q<VisualElement>("progress");
         navigationText = root.Q<Label>("navigationText");
     }
@@ -42,8 +54,10 @@ public class NavigationTab : MonoBehaviour
     /// <summary>
     /// Creates one element for each area the game has. Used for navigation.
     /// </summary>
-    private void CreateLevels()
+    private void CreateLevels(Area areaData)
     {
+        buttonsContainer.Clear();
+
         Area[] allAreas = AreaNavigation.AllAreas;
 
         for (int i = 0; i < allAreas.Length; i++)
@@ -57,7 +71,7 @@ public class NavigationTab : MonoBehaviour
             textContainer.Add(text);
             newArea.Add(textContainer);
 
-            content.Add(newArea);
+            buttonsContainer.Add(newArea);
 
             if (allAreas[i].Unlocked)
             {
@@ -69,6 +83,17 @@ public class NavigationTab : MonoBehaviour
                 });
                 newArea.RegisterCallback<MouseDownEvent>(SelectArea);
                 text.text = allAreas[i].Name;
+
+                if (allAreas[i].Active)
+                {
+                    newArea.AddToClassList("area-active");
+                }
+                else
+                {
+                    newArea.RemoveFromClassList("area-active");
+                }
+                    
+
             }
             else
             {
@@ -94,7 +119,7 @@ public class NavigationTab : MonoBehaviour
 
     private IEnumerator LoadNewArea(int areaID)
     {
-        if (loadingArea) yield return null;
+        if (loadingArea) yield break;
 
         navigationText.text = "Traveling to another dimension...";
         transitionTime = 0;

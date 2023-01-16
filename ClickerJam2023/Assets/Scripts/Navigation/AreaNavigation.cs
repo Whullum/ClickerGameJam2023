@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AreaNavigation : MonoBehaviour
 {
+    public static AreaData[] AreaData { get; set; }
     /// <summary>
     /// All the different areas teh game has.
     /// </summary>
@@ -23,6 +24,7 @@ public class AreaNavigation : MonoBehaviour
     private void Awake()
     {
         LoadAreasScriptables();
+        LoadAreaData();
 
         // For now we start on a predefined area. In the near future we need to load the last area the plaeyr was on.
         NavigateArea(areaToLoad);
@@ -46,10 +48,15 @@ public class AreaNavigation : MonoBehaviour
     {
         for (int i = 0; i < allAreas.Length; i++)
         {
+            if (activeArea != null) activeArea.Active = false;
+
             if (allAreas[i].ID == areaID)
             {
                 // This area is now the active one.
                 activeArea = allAreas[i];
+                // Unlock this area if it was not yet unlocked.
+                activeArea.Unlocked = true;
+                activeArea.Active = true;
                 // Launch event with the boss prefab data to spawn. Subscribed by BossManager.
                 AreaLoaded?.Invoke(activeArea);
 
@@ -74,5 +81,23 @@ public class AreaNavigation : MonoBehaviour
     private void LoadAreasScriptables()
     {
         allAreas = Resources.LoadAll<Area>("Navigation");
+    }
+
+    private void LoadAreaData()
+    {
+        if (AreaData.Length <= 0) return;
+
+        for(int i = 0; i < allAreas.Length; i++)
+        {
+            for(int j = 0; j < AreaData.Length; j++)
+            {
+                if (allAreas[i].ID == AreaData[j].ID)
+                {
+                    allAreas[i].Unlocked = AreaData[j].Unlocked;
+                    allAreas[i].Active = AreaData[j].Active;
+                    continue;
+                }
+            }
+        }
     }
 }

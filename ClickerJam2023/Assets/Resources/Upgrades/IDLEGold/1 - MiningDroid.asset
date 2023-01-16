@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1 - MiningDroid
   m_EditorClassIdentifier: 
   GUID: e7ee45a3-4500-43e1-9ea1-7a8de68e0363
-  Cost: 2
+  Cost: 1
   BaseValueUpgrade: 1
   EffectIncreaseRatio: 15
   CostIncreaseRatio: 1.3
