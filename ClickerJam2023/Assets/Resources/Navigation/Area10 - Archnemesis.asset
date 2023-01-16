@@ -15,10 +15,11 @@ MonoBehaviour:
   ID: 9
   Name: Wild Wastelands
   Unlocked: 0
+  Active: 0
   Lore: Your home. Or at least it was until Tom appeared. Now it's just a wasteland.
   CompanionLore: Seems like you've got some history with this... weed? Can't believe
     this was a revenge story this entire time.
   BossPrefab: {fileID: 1410207690174571512, guid: 878d9d14d39d3c048a7c7b19e1c725fa, type: 3}
   Wave: {fileID: 11400000, guid: c39c4101f247a264daa6bc1245912353, type: 2}
-  BackgroundImage: {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: e35ca6efafd910242ad1d6cbf71e54e5, type: 3}
   musicModeID: 0

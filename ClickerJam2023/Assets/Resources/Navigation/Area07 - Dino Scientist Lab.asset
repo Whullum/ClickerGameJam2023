@@ -15,11 +15,12 @@ MonoBehaviour:
   ID: 6
   Name: Dino Lab
   Unlocked: 0
+  Active: 0
   Lore: The inner workings of the dino lab that attempted to revive the dinosaurs.
     Apparently, the corporation that runs it is called the Parasol Conglomarate.
   CompanionLore: Wait, so this guy turned HIMSELF into a T-Rex? That's actually kind
     of cool.
   BossPrefab: {fileID: 1410207690174571512, guid: dc2f362c9321b5b40bc8a350d2c2e2a8, type: 3}
   Wave: {fileID: 11400000, guid: e5a68b76eff9df646a5649e49a9e96d5, type: 2}
-  BackgroundImage: {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: 0b54e92fe4543f747b6d6a4582182db9, type: 3}
   musicModeID: 3

@@ -15,6 +15,7 @@ MonoBehaviour:
   ID: 4
   Name: Fantasy Bartender
   Unlocked: 1
+  Active: 0
   Lore: Some fantasy location where beings from different dimentions congregate often.
     Well, to us it's fantasy but to the inhabitants of this realm it's all entirely
     normal.
@@ -26,5 +27,5 @@ MonoBehaviour:
     even make sense?'
   BossPrefab: {fileID: 1410207690174571512, guid: e7e092ce748f3b24d80147733bd27cd2, type: 3}
   Wave: {fileID: 11400000, guid: e55ca6222c18f5d4385ca1b8c6cefbea, type: 2}
-  BackgroundImage: {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: 150cc11140288904db46e0a11ca32bdb, type: 3}
   musicModeID: 4

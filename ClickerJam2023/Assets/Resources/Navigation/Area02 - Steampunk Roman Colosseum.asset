@@ -15,11 +15,12 @@ MonoBehaviour:
   ID: 1
   Name: Steampunk Roman Colosseum
   Unlocked: 1
+  Active: 0
   Lore: People here have somehow advanced through technology much earlier than in
     your home dimention. Almost too quickly. Perhaps something else had a hand in
     their advancement?
   CompanionLore: If this is a Roman Collosium, why is this guy Spartain?
   BossPrefab: {fileID: 1410207690174571512, guid: 4706b343922bc9349b04383527b318ec, type: 3}
   Wave: {fileID: 11400000, guid: 717d0a3588d5915489b8210f4dc3bb3d, type: 2}
-  BackgroundImage: {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: b78b30690afb181448c544879c31efa2, type: 3}
   musicModeID: 1

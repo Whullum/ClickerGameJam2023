@@ -15,11 +15,12 @@ MonoBehaviour:
   ID: 8
   Name: Last Legends Heavens
   Unlocked: 0
+  Active: 0
   Lore: 'The fourteenth and final area in the acclaimed dimentional meeting palce,
     Last Legends. '
   CompanionLore: My sensores are picking up some sort of advertisements for "free
     levels"? What the heck is a level? Does it get us more money?
   BossPrefab: {fileID: 1410207690174571512, guid: 91935847820060b49b421f79f9457482, type: 3}
   Wave: {fileID: 11400000, guid: 7309cfe7199f1ca46ae061c15cb96604, type: 2}
-  BackgroundImage: {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: 399ceb4f6630ae6479cc6e501fa3ebee, type: 3}
   musicModeID: 4

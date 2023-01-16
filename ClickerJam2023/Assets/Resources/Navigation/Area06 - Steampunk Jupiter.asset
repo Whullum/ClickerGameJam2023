@@ -15,11 +15,12 @@ MonoBehaviour:
   ID: 5
   Name: A Fight With The Gods
   Unlocked: 0
+  Active: 0
   Lore: Upon futher inspection, it seems the gods have blessed this dimention in
     particular, which is why they're so advanced despite taking place ealier in time.
   CompanionLore: Hey, look it's Zeus! Wait, what do you mean it's not Zeus? Jupiter?
     Is that Roman or something?
   BossPrefab: {fileID: 1410207690174571512, guid: 5a7148d60c08aa9458cc02d831fc7b2d, type: 3}
   Wave: {fileID: 11400000, guid: 574cec9733dc90545a4d6fabeccd4d5d, type: 2}
-  BackgroundImage: {fileID: 0}
+  BackgroundImage: {fileID: 21300000, guid: b78b30690afb181448c544879c31efa2, type: 3}
   musicModeID: 1
