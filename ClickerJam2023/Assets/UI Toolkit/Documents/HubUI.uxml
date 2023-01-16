@@ -5,15 +5,15 @@
     <ui:Template name="EventsTab" src="project://database/Assets/UI%20Toolkit/Documents/EventsTab.uxml?fileID=9197481963319205126&amp;guid=1a859c74d08174244b98072427b46994&amp;type=3#EventsTab" />
     <ui:Template name="SettingsTab" src="project://database/Assets/UI%20Toolkit/Documents/SettingsTab.uxml?fileID=9197481963319205126&amp;guid=25e0eaaa64d70d742be9631fcaa20e40&amp;type=3#SettingsTab" />
     <Style src="project://database/Assets/UI%20Toolkit/USS/hubUI.uss?fileID=7433441132597879392&amp;guid=b5d783a1d9398ce41af24e421b23f2c1&amp;type=3#hubUI" />
-    <ui:VisualElement name="hub" style="height: 100%; position: absolute; flex-grow: 1; width: 50%; left: 0; -unity-font-definition: url(&apos;project://database/Assets/Fonts/Envious%20SDF.asset?fileID=11400000&amp;guid=63ab1e82be762e24fbfff12dcf44c826&amp;type=2#Envious SDF&apos;); -unity-font: url(&apos;project://database/Assets/Fonts/Envious.ttf?fileID=12800000&amp;guid=e9e4b7ea8c72a794b9545106e33d6edb&amp;type=3#Envious&apos;);">
-        <ui:VisualElement name="content" style="flex-grow: 1; background-color: rgb(113, 182, 202); border-left-color: rgb(52, 124, 144); border-right-color: rgb(52, 124, 144); border-top-color: rgb(52, 124, 144); border-bottom-color: rgb(52, 124, 144); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 0; height: 80%;">
+    <ui:VisualElement name="hub" class="hub-in" style="transition-duration: 0.5s;">
+        <ui:VisualElement name="content" style="flex-grow: 1; background-color: rgba(29, 29, 29, 0.39); border-left-color: rgb(53, 53, 53); border-right-color: rgb(53, 53, 53); border-top-color: rgb(53, 53, 53); border-bottom-color: rgb(53, 53, 53); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 0; height: 80%;">
             <ui:Instance template="UpgradesTab" name="UpgradesTab" style="display: none; position: absolute; width: 100%; height: 100%;" />
             <ui:Instance template="ResourcesTab" name="ResourcesTab" style="display: none; flex-grow: 1;" />
             <ui:Instance template="NavigationUI" name="NavigationTab" style="display: none;" />
             <ui:Instance template="EventsTab" name="EventsTab" style="display: none;" />
             <ui:Instance template="SettingsTab" name="SettingsTab" style="display: none;" />
         </ui:VisualElement>
-        <ui:VisualElement name="tabs" style="bottom: 0; flex-direction: row; align-items: flex-end; flex-grow: 0.05; margin-top: -10px;">
+        <ui:VisualElement name="tabs" style="bottom: 0; flex-direction: row; align-items: flex-end; flex-grow: 0.05;">
             <ui:VisualElement name="upgrades" class="tab">
                 <ui:Label text="Upgrades" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
@@ -30,5 +30,6 @@
                 <ui:Label text="Settings" display-tooltip-when-elided="true" name="name" />
             </ui:VisualElement>
         </ui:VisualElement>
+        <ui:Button text="&gt;" display-tooltip-when-elided="true" name="toggleUIButton" class="toggle-ui-button" />
     </ui:VisualElement>
 </ui:UXML>

@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 public class HubUI : MonoBehaviour
 {
     private VisualElement root;
+    private VisualElement hub;
     private VisualElement upgradesTab;
     private VisualElement resourcesTab;
     private VisualElement navigationTab;
@@ -16,6 +17,7 @@ public class HubUI : MonoBehaviour
     private VisualElement eventsPanel;
     private VisualElement settingsPanel;
     private VisualElement currentActivePanel;
+    private Button toggleUIButton;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class HubUI : MonoBehaviour
     private void InitializeDocument()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
+        hub = root.Q<VisualElement>("hub");
         upgradesTab = root.Q<VisualElement>("upgrades");
         resourcesTab = root.Q<VisualElement>("resources");
         navigationTab = root.Q<VisualElement>("navigation");
@@ -35,12 +38,15 @@ public class HubUI : MonoBehaviour
         navigationPanel = root.Q<VisualElement>("NavigationTab");
         eventsPanel = root.Q<VisualElement>("EventsTab");
         settingsPanel = root.Q<VisualElement>("SettingsTab");
+        toggleUIButton = root.Q<Button>("toggleUIButton");
 
         upgradesTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         resourcesTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         navigationTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         eventsTab.RegisterCallback<MouseDownEvent>(ActivateTab);
         settingsTab.RegisterCallback<MouseDownEvent>(ActivateTab);
+
+        toggleUIButton.clicked += ToggleUI;
 
         upgradesTab.RegisterCallback<MouseOverEvent>((type) =>
         {
@@ -125,8 +131,9 @@ public class HubUI : MonoBehaviour
         currentActivePanel = upgradesPanel;
     }
 
-    public void UpdateNavigationUI()
+    private void ToggleUI()
     {
-
+        hub.ToggleInClassList("hub-in");
+        hub.ToggleInClassList("hub-out");
     }
 }

@@ -31,6 +31,7 @@ public class AreaNavigation : MonoBehaviour
 
         // For now we start on a predefined area. In the near future we need to load the last area the plaeyr was on.
         NavigateArea(activeArea.ID);
+        LoadAreaEnvironment(activeArea);
     }
 
     private void OnEnable()

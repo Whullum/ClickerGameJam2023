@@ -18,10 +18,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-left-color: rgb(23, 55, 77);
-    border-right-color: rgb(23, 55, 77);
-    border-top-color: rgb(23, 55, 77);
-    border-bottom-color: rgb(23, 55, 77);
+    border-left-color: rgb(29, 29, 29);
+    border-right-color: rgb(29, 29, 29);
+    border-top-color: rgb(29, 29, 29);
+    border-bottom-color: rgb(29, 29, 29);
     border-left-width: 3px;
     border-right-width: 3px;
     border-top-width: 3px;
@@ -30,7 +30,7 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: rgba(38, 38, 38, 0.78);
+    background-color: rgba(38, 38, 38, 0.39);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
@@ -73,7 +73,7 @@
 }
 
 .revolver-button {
-    background-color: rgb(178, 34, 34);
+    background-color: rgba(178, 34, 34, 0.39);
     border-left-color: rgb(79, 9, 9);
     border-right-color: rgb(79, 9, 9);
     border-top-color: rgb(79, 9, 9);
@@ -92,7 +92,7 @@
 }
 
 .idle-revolver-button {
-    background-color: rgb(214, 121, 47);
+    background-color: rgba(214, 121, 47, 0.39);
     border-left-color: rgb(137, 66, 12);
     border-right-color: rgb(137, 66, 12);
     border-top-color: rgb(137, 66, 12);
@@ -111,7 +111,7 @@
 }
 
 .gold-button {
-    background-color: rgb(46, 102, 185);
+    background-color: rgba(46, 102, 185, 0.39);
     border-left-color: rgb(16, 50, 87);
     border-right-color: rgb(16, 50, 87);
     border-top-color: rgb(16, 50, 87);
@@ -130,7 +130,7 @@
 }
 
 .idle-gold-button {
-    background-color: rgb(58, 173, 70);
+    background-color: rgba(58, 173, 70, 0.39);
     border-left-color: rgb(20, 89, 16);
     border-right-color: rgb(20, 89, 16);
     border-top-color: rgb(20, 89, 16);

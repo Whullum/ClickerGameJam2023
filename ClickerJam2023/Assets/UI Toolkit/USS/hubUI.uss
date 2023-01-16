@@ -13,9 +13,13 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 20px;
-    background-color: rgb(52, 124, 144);
-    font-size: 18px;
+    background-color: rgb(94, 94, 94);
+    font-size: 15px;
     color: rgb(255, 255, 255);
+    border-left-color: rgba(53, 53, 53, 255);
+    border-right-color: rgba(53, 53, 53, 255);
+    border-top-color: rgba(53, 53, 53, 255);
+    border-bottom-color: rgba(53, 53, 53, 255);
 }
 
 .tab:hover {
@@ -33,13 +37,13 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 20px;
-    background-color: rgb(113, 182, 202);
-    border-left-color: rgb(52, 124, 144);
-    border-right-color: rgb(52, 124, 144);
-    border-top-color: rgb(52, 124, 144);
-    border-bottom-color: rgb(52, 124, 144);
+    background-color: rgb(94, 94, 94);
+    border-left-color: rgb(36, 45, 48);
+    border-right-color: rgb(36, 45, 48);
+    border-top-color: rgb(36, 45, 48);
+    border-bottom-color: rgb(36, 45, 48);
     color: rgb(255, 255, 255);
-    font-size: 18px;
+    font-size: 15px;
     -unity-font-style: bold;
 }
 
@@ -58,12 +62,98 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 20px;
-    background-color: rgb(113, 182, 202);
-    border-left-color: rgb(52, 124, 144);
-    border-right-color: rgb(52, 124, 144);
-    border-top-color: rgb(52, 124, 144);
-    border-bottom-color: rgb(52, 124, 144);
-    color: rgb(201, 221, 255);
-    font-size: 18px;
+    background-color: rgba(94, 94, 94, 0.78);
+    border-left-color: rgb(53, 53, 53);
+    border-right-color: rgb(53, 53, 53);
+    border-top-color: rgb(53, 53, 53);
+    border-bottom-color: rgb(53, 53, 53);
+    color: rgb(180, 203, 241);
+    font-size: 15px;
     -unity-font-style: bold;
+}
+
+.hub-out {
+    height: 100%;
+    position: absolute;
+    flex-grow: 1;
+    width: 50%;
+    left: -50%;
+    -unity-font-definition: url('project://database/Assets/Fonts/Envious%20SDF.asset?fileID=11400000&guid=63ab1e82be762e24fbfff12dcf44c826&type=2#Envious SDF');
+    -unity-font: url('project://database/Assets/Fonts/Envious.ttf?fileID=12800000&guid=e9e4b7ea8c72a794b9545106e33d6edb&type=3#Envious');
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.hub-in {
+    height: 100%;
+    position: absolute;
+    flex-grow: 1;
+    width: 50%;
+    left: 0;
+    -unity-font-definition: url('project://database/Assets/Fonts/Envious%20SDF.asset?fileID=11400000&guid=63ab1e82be762e24fbfff12dcf44c826&type=2#Envious SDF');
+    -unity-font: url('project://database/Assets/Fonts/Envious.ttf?fileID=12800000&guid=e9e4b7ea8c72a794b9545106e33d6edb&type=3#Envious');
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.toggle-ui-button {
+    position: absolute;
+    top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0;
+    margin-right: -3%;
+    margin-top: 0;
+    margin-bottom: 0;
+    right: 0;
+    height: 5%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-width: 2px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    background-color: rgba(29, 29, 29, 0.39);
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(53, 53, 53);
+    border-right-color: rgb(53, 53, 53);
+    border-top-color: rgb(53, 53, 53);
+    border-bottom-color: rgb(53, 53, 53);
+    transition-duration: 0.2s;
+}
+
+.toggle-ui-button:hover {
+    position: absolute;
+    top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0;
+    margin-right: -3%;
+    margin-top: 0;
+    margin-bottom: 0;
+    right: 0;
+    height: 5%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-width: 2px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    background-color: rgba(111, 111, 111, 0.39);
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(53, 53, 53);
+    border-right-color: rgb(53, 53, 53);
+    border-top-color: rgb(53, 53, 53);
+    border-bottom-color: rgb(53, 53, 53);
+    transition-duration: 0.2s;
 }
