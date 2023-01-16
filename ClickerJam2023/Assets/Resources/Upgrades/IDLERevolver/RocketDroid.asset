@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RocketDroid
   m_EditorClassIdentifier: 
   GUID: 485c2c3f-13bf-4dd7-ab14-978065830244
-  Cost: 5
+  Cost: 225
   BaseValueUpgrade: 10
   EffectIncreaseRatio: 20
   CostIncreaseRatio: 3

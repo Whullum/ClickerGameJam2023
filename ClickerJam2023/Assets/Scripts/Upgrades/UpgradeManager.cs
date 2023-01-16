@@ -82,15 +82,23 @@ public class UpgradeManager : MonoBehaviour
         {
             case UpgradeType.Revolver_Damage:
                 PlayerRevolver.UpgradeDamage(upgrade.Value - previousValue);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/RevolverUpgrade");
+
                 break;
             case UpgradeType.IDLE_Revolver_Damage:
                 PlayerRevolver.UpgradePassiveDamage(upgrade.Value - previousValue);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/RevolverUpgrade");
+
                 break;
             case UpgradeType.Gold_Collection:
                 PlayerWallet.IncreaseGoldPerClick(upgrade.Value - previousValue);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/SpentGold");
+
                 break;
             case UpgradeType.IDLE_Gold_Collection:
                 PlayerWallet.IncreaseMoneyIncome(upgrade.Value - previousValue);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/SpentGold");
+
                 break;
         }
     }

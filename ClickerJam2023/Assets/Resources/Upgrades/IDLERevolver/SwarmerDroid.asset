@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwarmerDroid
   m_EditorClassIdentifier: 
   GUID: e4227504-e3ff-41f1-8c94-fe6eceb2b43c
-  Cost: 10
+  Cost: 300
   BaseValueUpgrade: 20
   EffectIncreaseRatio: 30
   CostIncreaseRatio: 5
