@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
         get { return isNewGame; }
     }
 
+    [SerializeField]
     private bool isNewGame;
 
     protected override void Awake()
