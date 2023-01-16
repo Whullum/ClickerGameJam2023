@@ -18,26 +18,29 @@ public class AreaNavigation : MonoBehaviour
     private static Area[] allAreas;
     // Current active area.
     private static Area activeArea;
-
-    [SerializeField] private int areaToLoad = 0; // For testing purposes.
+    private ParticleSystem areaLoadEffect;
 
     private void Awake()
     {
+        areaLoadEffect = GameObject.Find("AreaLoadedEffect").GetComponent<ParticleSystem>();
+
         LoadAreasScriptables();
         LoadAreaData();
 
         // For now we start on a predefined area. In the near future we need to load the last area the plaeyr was on.
-        NavigateArea(areaToLoad);
+        NavigateArea(activeArea.ID);
     }
 
     private void OnEnable()
     {
         BossManager.BossDefeated += UnlockNextArea;
+        AreaLoaded += LoadAreaEnvironment;
     }
 
     private void OnDisable()
     {
         BossManager.BossDefeated -= UnlockNextArea;
+        AreaLoaded -= LoadAreaEnvironment;
     }
 
     /// <summary>
@@ -71,8 +74,12 @@ public class AreaNavigation : MonoBehaviour
     /// </summary>
     private void UnlockNextArea()
     {
-        // For now we only iterate to the next avaliable area.
+        // We iterate to the next avaliable area.
         NavigateArea(activeArea.ID + 1);
+
+        areaLoadEffect.Play();
+
+        FightManager.StartWave();
     }
 
     /// <summary>
@@ -87,9 +94,9 @@ public class AreaNavigation : MonoBehaviour
     {
         if (AreaData.Length <= 0) return;
 
-        for(int i = 0; i < allAreas.Length; i++)
+        for (int i = 0; i < allAreas.Length; i++)
         {
-            for(int j = 0; j < AreaData.Length; j++)
+            for (int j = 0; j < AreaData.Length; j++)
             {
                 if (allAreas[i].ID == AreaData[j].ID)
                 {
@@ -98,6 +105,13 @@ public class AreaNavigation : MonoBehaviour
                     continue;
                 }
             }
+            if (allAreas[i].Active)
+                activeArea = allAreas[i];
         }
+    }
+
+    private void LoadAreaEnvironment(Area areaData)
+    {
+        areaLoadEffect.Play();
     }
 }

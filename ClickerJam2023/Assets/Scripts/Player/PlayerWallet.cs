@@ -44,6 +44,14 @@ public class PlayerWallet : MonoBehaviour
     private static int goldPerClick = 1;
     private float nextIncomeTime;
 
+    private void OnDisable()
+    {
+        wallet = 0;
+        moneyIncome = 0;
+        totalMoneySpend = 0;
+        goldPerClick = 1;
+    }
+
     private void Update()
     {
         GenerateMoney();

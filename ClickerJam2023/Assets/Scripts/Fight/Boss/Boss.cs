@@ -4,7 +4,7 @@ using UnityEngine;
 public class Boss : ScriptableObject
 {
     public int ID;
-    public float MaxHealth;
+    public int MaxHealth;
     public float HealthRegenRatio;
     public float ActiveTime;
     public string Name;

@@ -1,6 +1,6 @@
 using UnityEngine;
-using System.IO;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -9,7 +9,6 @@ public class GameManager : Singleton<GameManager>
         get { return isNewGame; }
     }
 
-    [SerializeField]
     private bool isNewGame;
 
     protected override void Awake()
@@ -30,6 +29,9 @@ public class GameManager : Singleton<GameManager>
         // We check if a base data exists, if not we create a new one.
         if (!PlayerPrefs.HasKey(SerializationSystem.BaseGameDataSave))
             SerializationSystem.SaveInitialUpgradeData();
+        if (!PlayerPrefs.HasKey(SerializationSystem.PlayerGameDataSave))
+            isNewGame = true;
+        else isNewGame = false;
     }
 
     private void LoadGameData()
@@ -46,5 +48,12 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(10);
         SerializationSystem.SaveGameData(SerializationSystem.PlayerGameDataSave);
         StartCoroutine(AutoSaveData());
+    }
+
+    public void NewGame()
+    {
+        SerializationSystem.DeletePlayerData();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -37,8 +37,6 @@ public class BossManager : MonoBehaviour
         Destroy(activeBoss.gameObject);
 
         BossDefeated?.Invoke();
-
-        FightManager.StartWave();
     }
 
     /// <summary>

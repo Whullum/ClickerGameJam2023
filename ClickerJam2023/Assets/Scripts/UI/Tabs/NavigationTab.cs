@@ -11,7 +11,6 @@ public class NavigationTab : MonoBehaviour
     private VisualElement navigationProgress;
     private VisualElement buttonsContainer;
     private Label navigationText;
-    private ParticleSystem areaLoadEffect;
     private bool loadingArea;
     private float transitionTime;
     [SerializeField] private float areaTransitionTime = 2;
@@ -22,8 +21,6 @@ public class NavigationTab : MonoBehaviour
     private void Awake()
     {
         InitializeDocument();
-
-        areaLoadEffect = GetComponentInChildren<ParticleSystem>();
     }
 
     private void OnEnable()
@@ -137,7 +134,6 @@ public class NavigationTab : MonoBehaviour
         navigationProgress.style.width = Length.Percent(0);
         navigationText.text = "You can travel to another area";
         loadingArea = false;
-        areaLoadEffect.Play();
         AreaNavigation.NavigateArea(areaID);
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/Click");
