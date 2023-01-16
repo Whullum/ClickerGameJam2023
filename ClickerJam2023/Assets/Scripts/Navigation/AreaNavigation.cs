@@ -19,10 +19,12 @@ public class AreaNavigation : MonoBehaviour
     // Current active area.
     private static Area activeArea;
     private ParticleSystem areaLoadEffect;
+    private SpriteRenderer areaBackground;
 
     private void Awake()
     {
         areaLoadEffect = GameObject.Find("AreaLoadedEffect").GetComponent<ParticleSystem>();
+        areaBackground = GetComponentInChildren<SpriteRenderer>();
 
         LoadAreasScriptables();
         LoadAreaData();
@@ -113,5 +115,6 @@ public class AreaNavigation : MonoBehaviour
     private void LoadAreaEnvironment(Area areaData)
     {
         areaLoadEffect.Play();
+        areaBackground.sprite = areaData.BackgroundImage;
     }
 }
