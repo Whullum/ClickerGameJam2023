@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MegaDroid
   m_EditorClassIdentifier: 
   GUID: fb3f24a6-6715-4f74-b20f-27363c76e70a
-  Cost: 20
+  Cost: 150
   BaseValueUpgrade: 4
   EffectIncreaseRatio: 40
   CostIncreaseRatio: 4
