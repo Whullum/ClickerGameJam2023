@@ -46,7 +46,7 @@ public class WaveSystem : MonoBehaviour
         ParticleSystemRenderer particleMaterial = enemyDeathEffect.GetComponent<ParticleSystemRenderer>();
         particleMaterial.material.mainTexture = waveData.EnemySprite;
         enemySprite.gameObject.SetActive(true);
-        enemySprite.sprite = Sprite.Create(waveData.EnemySprite, new Rect(0, 0, waveData.EnemySprite.width, waveData.EnemySprite.height), new Vector2(0.5f, 0.5f));
+        enemySprite.sprite = Sprite.Create(waveData.EnemySprite, new Rect(0, 0, waveData.EnemySprite.width, waveData.EnemySprite.height), new Vector2(0.5f, 0.5f), 16f);
         CreateNewEnemy();
     }
 

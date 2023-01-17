@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33449be4ccfb8894a81f85bcdb38e8b5, type: 3}
-  m_Name: Boss03
+  m_Name: Boss11
   m_EditorClassIdentifier: 
-  ID: 3
-  MaxHealth: 500
+  ID: 11
+  MaxHealth: 1000000
   HealthRegenRatio: 2
-  ActiveTime: 25
-  Name: A Horde of Dino Zombies
-  Lore: 'Failed dinosaur experiements made in an attempt to revive the past.
+  ActiveTime: 20
+  Name: Tumbleweed Tom
+  Lore: 'A being of enourmous power and great evil. Thousands of bounty hunters have
+    died to this creature. Your archnemesis.
 
 
-    These
-    would make for a horrible amusement park attraction.'
-  BountyReward: 800
+    Because nothing is more dangerous
+    than a tumbleweed with a gun.'
+  BountyReward: 1500

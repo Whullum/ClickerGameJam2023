@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33449be4ccfb8894a81f85bcdb38e8b5, type: 3}
   m_Name: Boss07
   m_EditorClassIdentifier: 
-  ID: 6
+  ID: 7
   MaxHealth: 10000
   HealthRegenRatio: 2
   ActiveTime: 40
