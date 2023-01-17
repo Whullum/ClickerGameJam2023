@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33449be4ccfb8894a81f85bcdb38e8b5, type: 3}
   m_Name: Boss10
   m_EditorClassIdentifier: 
-  ID: 9
+  ID: 10
   MaxHealth: 100000
   HealthRegenRatio: 2
   ActiveTime: 20
-  Name: Tumbleweed Tom
-  Lore: 'A being of enourmous power and great evil. Thousands of bounty hunters have
-    died to this creature. Your archnemesis.
+  Name: God of the Last Legend
+  Lore: 'This being calls actually hates calling themselves a god and prefers to
+    use the title "The Final Boss of Last Legend".
 
 
-    Because nothing is more dangerous
-    than a tumbleweed with a gun.'
-  BountyReward: 1500
+    Wait, are your bullets eqipped
+    to kill gods? How did we even get to this point?'
+  BountyReward: 1200
