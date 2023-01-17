@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 3 - UraniumLacedPoints
   m_EditorClassIdentifier: 
   GUID: f6ecb174-87f7-4697-949c-bf5aef050f04
-  Cost: 125
+  Cost: 200
   BaseValueUpgrade: 6
-  EffectIncreaseRatio: 140
+  EffectIncreaseRatio: 125
   CostIncreaseRatio: 2
   NextUpgrade: {fileID: 0}
   NextUpgradeUnlockCount: 0
