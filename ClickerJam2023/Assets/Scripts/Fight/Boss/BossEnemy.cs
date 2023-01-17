@@ -25,6 +25,7 @@ public class BossEnemy : MonoBehaviour
 
     private int currentHealth;
     private float aliveTime;
+    private float currentBossKillTime;
 
     [Tooltip("The scriptable object of this boss.")]
     [SerializeField] private Boss bossScriptable;
@@ -57,6 +58,10 @@ public class BossEnemy : MonoBehaviour
         {
             currentHealth = 0;
             AddBountyReward();
+
+            if (currentBossKillTime < PlayerStats.FastestBossKill)
+                PlayerStats.FastestBossKill = currentBossKillTime;
+
             return true;
         }
 
@@ -77,6 +82,7 @@ public class BossEnemy : MonoBehaviour
     private void InitializeBoss()
     {
         currentHealth = bossScriptable.MaxHealth;
+        currentBossKillTime = 0;
     }
 
     private void AddBountyReward()
@@ -95,6 +101,7 @@ public class BossEnemy : MonoBehaviour
             FightManager.StartWave();
         }
         aliveTime -= Time.deltaTime;
+        currentBossKillTime += Time.deltaTime;            
     }
 
     public void RegenBoss()

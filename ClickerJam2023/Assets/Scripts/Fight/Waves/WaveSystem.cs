@@ -75,6 +75,7 @@ public class WaveSystem : MonoBehaviour
                 enemyCount--;
                 PlayerWallet.AddMoney(currentEnemyReward);
                 totalEnemiesKilled++;
+                PlayerStats.TotalEnemiesKilled++;
                 CreateNewEnemy();
 
                 if (enemyCount <= 0)

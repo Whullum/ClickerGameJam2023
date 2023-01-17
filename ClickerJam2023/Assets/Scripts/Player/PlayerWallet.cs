@@ -61,6 +61,7 @@ public class PlayerWallet : MonoBehaviour
     {
         wallet += amount;
         WalletUpdated?.Invoke();
+        PlayerStats.TotalGold += amount;
     }
 
     public static void LoadWalletData(int data) => wallet = data;
@@ -73,7 +74,7 @@ public class PlayerWallet : MonoBehaviour
         else
         {
             wallet -= spendAmount;
-            totalMoneySpend += spendAmount;
+            PlayerStats.TotalGoldSpend += spendAmount;
             WalletUpdated?.Invoke();
             return true;
         }
@@ -95,6 +96,7 @@ public class PlayerWallet : MonoBehaviour
         if (nextIncomeTime <= 0)
         {
             AddMoney(moneyIncome);
+            PlayerStats.TotalPassiveGold += moneyIncome;
             nextIncomeTime = 1;
         }
         nextIncomeTime -= Time.deltaTime;

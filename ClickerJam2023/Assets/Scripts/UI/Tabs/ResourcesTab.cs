@@ -11,7 +11,6 @@ public class ResourcesTab : MonoBehaviour
     private Label idleIncome;
     private Label damage;
     private Label idleDamage;
-    private Label totalSpend;
     private Label companionLore;
 
     private void Awake()
@@ -47,7 +46,6 @@ public class ResourcesTab : MonoBehaviour
         idleIncome = content.Q<Label>("idleIncome");
         damage = content.Q<Label>("damage");
         idleDamage = content.Q<Label>("idleDamage");
-        totalSpend = content.Q<Label>("totalSpend");
         companionLore = content.Q<Label>("companionLore");
 
         goldImageClick.RegisterCallback<MouseDownEvent>(GoldClick);
@@ -60,7 +58,6 @@ public class ResourcesTab : MonoBehaviour
         idleIncome.text = PlayerWallet.MoneyIncome.ToString();
         damage.text = PlayerRevolver.Damage.ToString();
         idleDamage.text = PlayerRevolver.PassiveDamage.ToString();
-        totalSpend.text = PlayerWallet.TotalMoneySpend.ToString();
     }
 
     private void UpdateCompanionLore(Area areaData) => companionLore.text = areaData.CompanionLore;

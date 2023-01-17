@@ -41,6 +41,7 @@ public class GameManager : Singleton<GameManager>
         UpgradeManager.LoadedUpgradeData = gameData.Upgrades;
         AreaNavigation.AreaData = gameData.Areas;
         PlayerWallet.LoadWalletData(gameData.Wallet.Wallet);
+        PlayerStats.LoadStats(gameData.Stats);
     }
 
     private IEnumerator AutoSaveData()

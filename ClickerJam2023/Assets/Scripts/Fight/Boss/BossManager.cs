@@ -63,7 +63,13 @@ public class BossManager : MonoBehaviour
             BossDeath();
     }
 
-    private void LoadAreaData(Area data) => areaData = data;
+    private void LoadAreaData(Area data)
+    {
+        areaData = data;
+
+        if (activeBoss != null)
+            activeBoss.Despawn();
+    }
 
     public void StartBossFight()
     {

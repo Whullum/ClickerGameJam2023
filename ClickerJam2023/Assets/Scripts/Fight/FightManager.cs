@@ -47,6 +47,8 @@ public class FightManager : MonoBehaviour
 
         RevolverHitEffect();
         PlayerRevolver.IsClicking = true;
+        PlayerStats.TotalClickNumber++;
+        PlayerStats.TotalDamageDealed += PlayerRevolver.Damage;
     }
 
     private void RevolverHitEffect()
@@ -82,7 +84,7 @@ public class FightManager : MonoBehaviour
                 HitWave(HitType.Passive);
             if (fightState == FightState.Boss)
                 HitBoss(HitType.Passive);
-
+            PlayerStats.TotalDamageDealed += PlayerRevolver.PassiveDamage;
             hitTimer = 1;
         }
         hitTimer -= Time.deltaTime;
@@ -105,6 +107,7 @@ public class FightManager : MonoBehaviour
         fightUI.ActivateWaveButton();
         fightUI.UpdateFightTitle(waveSystem.WaveName);
         fightUI.ShowFeedback("Fight the enemy wave!", 2);
+        fightUI.UpdateFightStatusText("Enemies left " + waveSystem.EnemiesLeft.ToString());
     }
 
     public static void StartBossFight()

@@ -16,10 +16,10 @@
     background-color: rgb(94, 94, 94);
     font-size: 15px;
     color: rgb(255, 255, 255);
-    border-left-color: rgba(53, 53, 53, 255);
-    border-right-color: rgba(53, 53, 53, 255);
-    border-top-color: rgba(53, 53, 53, 255);
-    border-bottom-color: rgba(53, 53, 53, 255);
+    border-left-color: rgb(53, 53, 53);
+    border-right-color: rgb(53, 53, 53);
+    border-top-color: rgb(53, 53, 53);
+    border-bottom-color: rgb(53, 53, 53);
 }
 
 .tab:hover {
@@ -70,30 +70,6 @@
     color: rgb(180, 203, 241);
     font-size: 15px;
     -unity-font-style: bold;
-}
-
-.hub-out {
-    height: 100%;
-    position: absolute;
-    flex-grow: 1;
-    width: 50%;
-    left: -50%;
-    -unity-font-definition: url('project://database/Assets/Fonts/Envious%20SDF.asset?fileID=11400000&guid=63ab1e82be762e24fbfff12dcf44c826&type=2#Envious SDF');
-    -unity-font: url('project://database/Assets/Fonts/Envious.ttf?fileID=12800000&guid=e9e4b7ea8c72a794b9545106e33d6edb&type=3#Envious');
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-}
-
-.hub-in {
-    height: 100%;
-    position: absolute;
-    flex-grow: 1;
-    width: 50%;
-    left: 0;
-    -unity-font-definition: url('project://database/Assets/Fonts/Envious%20SDF.asset?fileID=11400000&guid=63ab1e82be762e24fbfff12dcf44c826&type=2#Envious SDF');
-    -unity-font: url('project://database/Assets/Fonts/Envious.ttf?fileID=12800000&guid=e9e4b7ea8c72a794b9545106e33d6edb&type=3#Envious');
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
 }
 
 .toggle-ui-button {
@@ -156,4 +132,18 @@
     border-top-color: rgb(53, 53, 53);
     border-bottom-color: rgb(53, 53, 53);
     transition-duration: 0.2s;
+}
+
+.hub-in {
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transition-duration: 0.5s;
+}
+
+.hub-out {
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    transition-duration: 0.5s;
 }

@@ -1,5 +1,3 @@
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class SerializationSystem
@@ -38,7 +36,8 @@ public class SerializationSystem
         UpgradeData[] allUpgrades = SaveUpgradesData();
         AreaData[] areaData = SaveAreaData();
         WalletData wallet = SaveWalletData();
-        GameData gameData = new GameData(allUpgrades,areaData, wallet);
+        StatsData stats = SaveStatsData();
+        GameData gameData = new GameData(allUpgrades,areaData, wallet, stats);
 
         string savedData = JsonUtility.ToJson(gameData);
 
@@ -83,5 +82,11 @@ public class SerializationSystem
             areaData[i] = savedData;
         }
         return areaData;
+    }
+
+    private static StatsData SaveStatsData()
+    {
+        return new StatsData(PlayerStats.TotalGold, PlayerStats.TotalGoldSpend, PlayerStats.TotalPassiveGold, PlayerStats.TotalDamageDealed,
+            PlayerStats.TotalEnemiesKilled, PlayerStats.TotalUpgradesBought, PlayerStats.TotalClickNumber, PlayerStats.FastestBossKill);
     }
 }

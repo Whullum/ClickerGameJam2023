@@ -65,7 +65,7 @@ public class AreaNavigation : MonoBehaviour
                 activeArea.Active = true;
                 // Launch event with the boss prefab data to spawn. Subscribed by BossManager.
                 AreaLoaded?.Invoke(activeArea);
-
+                FightManager.StartWave();
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("MusicState", activeArea.musicModeID);
                 return;
             }
@@ -81,8 +81,6 @@ public class AreaNavigation : MonoBehaviour
         NavigateArea(activeArea.ID + 1);
 
         areaLoadEffect.Play();
-
-        FightManager.StartWave();
     }
 
     /// <summary>

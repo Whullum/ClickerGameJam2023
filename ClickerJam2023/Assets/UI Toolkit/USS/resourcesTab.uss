@@ -5,10 +5,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgba(43, 43, 43, 0.78);
-    border-left-color: rgb(13, 98, 140);
-    border-right-color: rgb(13, 98, 140);
-    border-top-color: rgb(13, 98, 140);
-    border-bottom-color: rgb(13, 98, 140);
+    border-left-color: rgb(34, 34, 34);
+    border-right-color: rgb(34, 34, 34);
+    border-top-color: rgb(34, 34, 34);
+    border-bottom-color: rgb(34, 34, 34);
     border-left-width: 3px;
     border-right-width: 3px;
     border-top-width: 3px;
@@ -24,10 +24,10 @@
 
 .container {
     background-color: rgba(43, 43, 43, 0.78);
-    border-left-color: rgb(12, 98, 140);
-    border-right-color: rgb(12, 98, 140);
-    border-top-color: rgb(12, 98, 140);
-    border-bottom-color: rgb(12, 98, 140);
+    border-left-color: rgb(34, 34, 34);
+    border-right-color: rgb(34, 34, 34);
+    border-top-color: rgb(34, 34, 34);
+    border-bottom-color: rgb(34, 34, 34);
     border-left-width: 3px;
     border-right-width: 3px;
     border-top-width: 3px;
@@ -62,7 +62,7 @@
     flex-grow: 0.5;
     -unity-text-align: middle-right;
     color: rgb(255, 255, 0);
-    -unity-font-style: bold;
+    -unity-font-style: normal;
 }
 
 .gold-image-click {

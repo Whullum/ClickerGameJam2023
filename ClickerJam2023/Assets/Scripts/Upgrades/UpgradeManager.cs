@@ -68,6 +68,7 @@ public class UpgradeManager : MonoBehaviour
         upgrade.Value = newValue;
         upgrade.NextValue = nextValue;
         upgrade.TimesUnlocked++;
+        PlayerStats.TotalUpgradesBought++;
 
         if (upgrade.TimesUnlocked >= upgrade.NextUpgradeUnlockCount)
             if (upgrade.NextUpgrade != null)

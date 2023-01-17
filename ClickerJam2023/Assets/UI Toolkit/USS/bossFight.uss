@@ -1,7 +1,7 @@
 .health {
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 138, 0);
+    background-color: rgb(255, 36, 0);
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     border-top-right-radius: 22px;
@@ -32,6 +32,32 @@
     border-right-color: rgb(24, 47, 87);
     border-top-color: rgb(24, 47, 87);
     border-bottom-color: rgb(24, 47, 87);
+    transition-duration: 0.1s;
+}
+
+.wave-button-in {
+    position: absolute;
+    bottom: 2%;
+    width: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(43, 51, 67);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(24, 47, 87);
+    border-right-color: rgb(24, 47, 87);
+    border-top-color: rgb(24, 47, 87);
+    border-bottom-color: rgb(24, 47, 87);
+    transition-duration: 0.1s;
+    scale: 1.1 1.1;
 }
 
 .boss-button {
@@ -92,17 +118,17 @@
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 20px;
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgba(55, 195, 52, 255);
+    background-color: rgb(55, 195, 52);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-left-color: rgba(27, 183, 43, 255);
-    border-right-color: rgba(60, 147, 69, 255);
-    border-top-color: rgba(16, 152, 30, 255);
-    border-bottom-color: rgba(38, 173, 52, 255);
+    border-left-color: rgb(27, 183, 43);
+    border-right-color: rgb(60, 147, 69);
+    border-top-color: rgb(16, 152, 30);
+    border-bottom-color: rgb(38, 173, 52);
     border-left-width: 5px;
     border-right-width: 5px;
     border-top-width: 5px;

@@ -1,16 +1,16 @@
 .title {
-    font-size: 40px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-    -unity-font-style: bold;
+    -unity-font-style: normal;
 }
 
 .lore-container {
     width: 100%;
     min-height: 10%;
-    border-left-color: rgb(15, 103, 137);
-    border-right-color: rgb(15, 103, 137);
-    border-top-color: rgb(15, 103, 137);
-    border-bottom-color: rgb(15, 103, 137);
+    border-left-color: rgb(48, 48, 48);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
     border-left-width: 3px;
     border-right-width: 3px;
     border-top-width: 3px;
@@ -30,46 +30,31 @@
 
 .lore-text {
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 14px;
     white-space: normal;
 }
 
 .stats-title {
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-    -unity-font-style: bold;
+    -unity-font-style: normal;
 }
 
-.stats-container {
+.stat {
     flex-direction: row;
-    flex-wrap: wrap;
-    border-left-width: 3px;
-    border-right-width: 3px;
-    border-top-width: 3px;
-    border-bottom-width: 3px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-left-color: rgba(15, 103, 137, 255);
-    border-right-color: rgba(15, 103, 137, 255);
-    border-top-color: rgba(15, 103, 137, 255);
-    border-bottom-color: rgba(15, 103, 137, 255);
+    align-items: center;
+    justify-content: space-around;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 100%;
-    min-height: 10%;
-    background-color: rgba(31, 31, 31, 0.78);
-}
-
-.player-stat {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    background-color: rgba(48, 48, 48, 255);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 255);
-    -unity-font-style: bold;
-    font-size: 20px;
 }

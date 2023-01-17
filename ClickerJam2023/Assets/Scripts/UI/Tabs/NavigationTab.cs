@@ -73,6 +73,7 @@ public class NavigationTab : MonoBehaviour
             if (allAreas[i].Unlocked)
             {
                 newArea.userData = allAreas[i].ID;
+                newArea.style.backgroundImage = new StyleBackground(allAreas[i].BackgroundImage);
                 newArea.AddToClassList("area");
                 newArea.RegisterCallback<MouseOverEvent>((type) => 
                 {
