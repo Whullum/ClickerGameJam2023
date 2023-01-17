@@ -18,4 +18,4 @@ MonoBehaviour:
   MaxEnemyHealth: 25
   MinGoldPerKill: 8
   MaxGoldPerKill: 12
-  EnemySprite: {fileID: 2800000, guid: e97f44a089f144758b462da41bc96973, type: 3}
+  EnemySprite: {fileID: 2800000, guid: 3b2bf74d153148440a9078710b15c979, type: 3}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ee13817dc44451742a390625394f2110
+guid: 3b2bf74d153148440a9078710b15c979
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,112 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: enemy-spawner_0
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 0
-        width: 19
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f90083d223a50e4baaaea9249bf0918
-      internalID: 187755923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy-spawner_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 0
-        width: 19
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 969ad7f935d0aa340aad83ce9adb3a3c
-      internalID: 590394431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy-spawner_2
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 0
-        width: 19
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2da55221839a0004da01e0de05a644c2
-      internalID: -1774926133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy-spawner_3
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 0
-        width: 19
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fef0bb3b7ce105045bab8a533df3dba3
-      internalID: -1133013378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy-spawner_4
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 0
-        width: 19
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a7faed2f6c90ce4e9b8c271d167acca
-      internalID: -1555474070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -231,13 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      enemy-spawner_4: 187755923
-      enemy-spawner_3: 590394431
-      enemy-spawner_2: -1774926133
-      enemy-spawner_1: -1133013378
-      enemy-spawner_0: -1555474070
-      enemy-spawner_5: -547484372
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
