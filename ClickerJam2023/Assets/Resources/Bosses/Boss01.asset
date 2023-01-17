@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   MaxHealth: 50
-  HealthRegenRatio: 5
+  HealthRegenRatio: 2
   ActiveTime: 20
   Name: Rock Cowboy
   Lore: 'A rock with googly eyes. For some reason, these can be found in almost every

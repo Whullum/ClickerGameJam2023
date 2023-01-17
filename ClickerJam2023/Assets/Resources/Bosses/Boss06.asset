@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 6
   MaxHealth: 5000
-  HealthRegenRatio: 1
-  ActiveTime: 40
+  HealthRegenRatio: 5
+  ActiveTime: 30
   Name: Steampunk Jupiter
   Lore: 'Apparently the Roman gods exist in this world too. Maybe they had a hand
     in their rapid early development?
@@ -23,4 +23,4 @@ MonoBehaviour:
 
     Don''t call this guy Zeus. Please. For
     your sake.'
-  BountyReward: 100
+  BountyReward: 3000

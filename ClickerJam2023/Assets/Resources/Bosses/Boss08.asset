@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 8
   MaxHealth: 20000
-  HealthRegenRatio: 2
-  ActiveTime: 50
+  HealthRegenRatio: 7
+  ActiveTime: 35
   Name: Vampire CEO
   Lore: "The CEO of Fang, inc. On the surface he's charming, but he's as corrupt
     as can be.\n\nDo we have bullets in the shape of a wooden stake? Would those
     even work? There's so many different types of vampies in each dimention that
     I don't know what this guy's weakness is. \n\nJust start blasing or something. "
-  BountyReward: 800
+  BountyReward: 6000

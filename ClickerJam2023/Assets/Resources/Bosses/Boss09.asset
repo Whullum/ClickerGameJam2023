@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 9
   MaxHealth: 50000
-  HealthRegenRatio: 2
-  ActiveTime: 80
+  HealthRegenRatio: 7
+  ActiveTime: 40
   Name: God of the Last Legend
   Lore: 'This being calls actually hates calling themselves a god and prefers to
     use the title "The Final Boss of Last Legend".
@@ -23,4 +23,4 @@ MonoBehaviour:
 
     Wait, are your bullets eqipped
     to kill gods? How did we even get to this point?'
-  BountyReward: 1200
+  BountyReward: 8000

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 7
   MaxHealth: 10000
-  HealthRegenRatio: 2
-  ActiveTime: 40
+  HealthRegenRatio: 5
+  ActiveTime: 30
   Name: T-Rex Scientist
   Lore: 'A genius scientist who turned himself into a T-Rex. Guess he really likes
     dinosaurs.
 
 
     How does he use those small arms of his?'
-  BountyReward: 500
+  BountyReward: 4000

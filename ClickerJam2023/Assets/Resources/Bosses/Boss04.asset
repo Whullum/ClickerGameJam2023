@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   MaxHealth: 1000
-  HealthRegenRatio: 2
-  ActiveTime: 30
+  HealthRegenRatio: 5
+  ActiveTime: 25
   Name: Werewolf Vice President
   Lore: 'A werewolf that works for the vampire corperation Fang, inc. In this dimention,
     werewolves and vampires get along quite well.

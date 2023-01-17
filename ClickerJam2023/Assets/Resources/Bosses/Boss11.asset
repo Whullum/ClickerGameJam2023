@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Boss11
   m_EditorClassIdentifier: 
   ID: 11
-  MaxHealth: 1000000
-  HealthRegenRatio: 2
-  ActiveTime: 20
+  MaxHealth: 150000
+  HealthRegenRatio: 9
+  ActiveTime: 45
   Name: Tumbleweed Tom
   Lore: 'A being of enourmous power and great evil. Thousands of bounty hunters have
     died to this creature. Your archnemesis.
@@ -23,4 +23,4 @@ MonoBehaviour:
 
     Because nothing is more dangerous
     than a tumbleweed with a gun.'
-  BountyReward: 1500
+  BountyReward: 100000

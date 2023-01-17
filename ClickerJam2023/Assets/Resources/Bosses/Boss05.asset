@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 5
   MaxHealth: 2000
-  HealthRegenRatio: 2
-  ActiveTime: 35
+  HealthRegenRatio: 5
+  ActiveTime: 30
   Name: Some Bartender???
   Lore: 'A bartender from another world? No idea where this person came from, but
     the sensors say that she''s not from this dimention.
