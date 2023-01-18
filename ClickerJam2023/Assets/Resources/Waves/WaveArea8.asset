@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11bc27888f7e454f88aca3bb446954b, type: 3}
   m_Name: WaveArea8
   m_EditorClassIdentifier: 
-  WaveName: Wave
+  WaveName: Evil Servants
   EnemyCount: 200
   MinEnemyHealth: 20
   MaxEnemyHealth: 30
   MinGoldPerKill: 10
   MaxGoldPerKill: 15
-  EnemySprite: {fileID: 2800000, guid: 3b2bf74d153148440a9078710b15c979, type: 3}
+  EnemySprite: {fileID: 2800000, guid: 84d3524b42845d84d81b8ac9afcbf595, type: 3}

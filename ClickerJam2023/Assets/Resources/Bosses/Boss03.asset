@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   MaxHealth: 500
-  HealthRegenRatio: 2
+  HealthRegenRatio: 5
   ActiveTime: 25
   Name: A Horde of Dino Zombies
   Lore: 'Failed dinosaur experiements made in an attempt to revive the past.

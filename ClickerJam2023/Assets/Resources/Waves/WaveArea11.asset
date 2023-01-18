@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11bc27888f7e454f88aca3bb446954b, type: 3}
   m_Name: WaveArea11
   m_EditorClassIdentifier: 
-  WaveName: Wave
-  EnemyCount: 250
+  WaveName: Bounty Hunters
+  EnemyCount: 1000
   MinEnemyHealth: 30
   MaxEnemyHealth: 45
   MinGoldPerKill: 15
   MaxGoldPerKill: 20
-  EnemySprite: {fileID: 2800000, guid: 3b2bf74d153148440a9078710b15c979, type: 3}
+  EnemySprite: {fileID: 2800000, guid: cbc60fb28144a6344a294f37338ca2f9, type: 3}

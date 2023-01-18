@@ -1,15 +1,13 @@
 .area {
-    width: 256px;
-    height: 156px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgb(134, 96, 229);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-left-color: rgb(116, 70, 166);
     border-right-color: rgb(116, 70, 166);
     border-top-color: rgb(116, 70, 166);
@@ -21,24 +19,26 @@
     transition-duration: 0.2s;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    max-width: 256px;
+    max-height: 156px;
+    min-width: 212px;
+    min-height: 128px;
 }
 
 .area:hover {
-    width: 256px;
-    height: 156px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgb(107, 53, 241);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-left-color: rgb(168, 105, 236);
     border-right-color: rgb(168, 105, 236);
     border-top-color: rgb(168, 105, 236);
@@ -50,20 +50,26 @@
     transition-duration: 0.2s;
     rotate: -10deg;
     scale: 1.2 1.2;
+    max-width: 256px;
+    max-height: 156px;
+    min-width: 212px;
+    min-height: 128px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .area-locked {
-    width: 256px;
-    height: 156px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgb(78, 55, 135);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-left-color: rgb(116, 70, 166);
     border-right-color: rgb(116, 70, 166);
     border-top-color: rgb(116, 70, 166);
@@ -75,24 +81,26 @@
     transition-duration: 0.2s;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    max-width: 256px;
+    max-height: 156px;
+    min-width: 212px;
+    min-height: 128px;
 }
 
 .area-locked:hover {
-    width: 256px;
-    height: 156px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgb(34, 14, 82);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-left-color: rgb(116, 70, 166);
     border-right-color: rgb(116, 70, 166);
     border-top-color: rgb(116, 70, 166);
@@ -104,19 +112,23 @@
     transition-duration: 0.2s;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    max-width: 256px;
+    max-height: 156px;
+    min-height: 128px;
+    min-width: 212px;
 }
 
 .text-container {
     rotate: 30deg;
     background-color: rgba(58, 58, 58, 0.39);
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -133,10 +145,10 @@
 .text-container:hover {
     rotate: 10deg;
     background-color: rgba(17, 17, 17, 0.78);
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -159,17 +171,15 @@
 }
 
 .area-active {
-    width: 256px;
-    height: 156px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgb(96, 140, 229);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-left-color: rgb(70, 79, 166);
     border-right-color: rgb(70, 79, 166);
     border-top-color: rgb(70, 79, 166);
@@ -181,24 +191,26 @@
     transition-duration: 0.2s;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    max-width: 256px;
+    max-height: 156px;
+    min-width: 212px;
+    min-height: 128px;
 }
 
 .area-active:hover {
-    width: 256px;
-    height: 156px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgb(175, 201, 253);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-left-color: rgb(67, 80, 207);
     border-right-color: rgb(67, 80, 207);
     border-top-color: rgb(67, 80, 207);
@@ -210,8 +222,12 @@
     transition-duration: 0.2s;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    max-width: 256px;
+    max-height: 156px;
+    min-height: 128px;
+    min-width: 212px;
 }

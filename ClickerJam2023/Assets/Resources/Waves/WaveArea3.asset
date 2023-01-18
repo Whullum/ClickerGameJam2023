@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11bc27888f7e454f88aca3bb446954b, type: 3}
   m_Name: WaveArea3
   m_EditorClassIdentifier: 
-  WaveName: Wave
+  WaveName: Swarm of Mini Dinos
   EnemyCount: 75
   MinEnemyHealth: 10
   MaxEnemyHealth: 15
   MinGoldPerKill: 3
   MaxGoldPerKill: 6
-  EnemySprite: {fileID: 2800000, guid: 3b2bf74d153148440a9078710b15c979, type: 3}
+  EnemySprite: {fileID: 2800000, guid: f995e16564b4a1a47b5765de58f73880, type: 3}

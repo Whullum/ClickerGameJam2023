@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss01
   m_EditorClassIdentifier: 
   ID: 1
-  MaxHealth: 50
+  MaxHealth: 100
   HealthRegenRatio: 2
   ActiveTime: 20
   Name: Rock Cowboy
