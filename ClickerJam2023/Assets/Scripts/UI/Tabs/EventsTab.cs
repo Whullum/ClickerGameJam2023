@@ -78,7 +78,11 @@ public class EventsTab : MonoBehaviour
         totalEnemiesKilled.text = PlayerStats.TotalEnemiesKilled.ToString();
         totalUpgradesBought.text = PlayerStats.TotalUpgradesBought.ToString();
         totalClicks.text = PlayerStats.TotalClickNumber.ToString();
-        fastestBossKill.text = PlayerStats.FastestBossKill.ToString();
+
+        if (PlayerStats.FastestBossKill == Mathf.Infinity)
+            fastestBossKill.text = "Try harder";
+        else
+            fastestBossKill.text = PlayerStats.FastestBossKill.ToString();
 
         yield return new WaitForSeconds(statsUpdateTime);
 

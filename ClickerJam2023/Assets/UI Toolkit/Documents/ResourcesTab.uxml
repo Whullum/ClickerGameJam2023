@@ -22,7 +22,7 @@
                 <ui:Label text="0" display-tooltip-when-elided="true" name="damage" class="row-value" style="color: rgb(255, 0, 0);" />
             </ui:VisualElement>
             <ui:VisualElement name="row" class="row">
-                <ui:Label text="Passive revolver damage" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
+                <ui:Label text="Passive revolver damage (s)" display-tooltip-when-elided="true" class="row-text" style="flex-grow: 0.5;" />
                 <ui:Label text="0" display-tooltip-when-elided="true" name="idleDamage" class="row-value" style="color: rgb(255, 0, 0);" />
             </ui:VisualElement>
         </ui:VisualElement>
